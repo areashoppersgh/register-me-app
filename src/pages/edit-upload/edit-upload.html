@@ -1,0 +1,174 @@
+<!--
+  Generated template for the EditUploadPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>editUpload</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (ngSubmit)="updateUpload()">
+      <ion-row>
+          <ion-col>
+            <ion-list inset>
+
+              <ion-item>
+                  <div class="profile-image" (click)="presentActionSheet()">
+                      <img src="{{data.fileUpload}}">
+                    </div>
+              </ion-item>
+            <ion-item>
+                <ion-label floating>FindMeId</ion-label>
+                <ion-input type="text" 
+                 
+                  [(ngModel)]="data.findMeId" 
+                  name="findMeId" required="" >
+                </ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Office/ Shop Name</ion-label>
+                <ion-input
+                           name="officeName" 
+                           type="text" required 
+                           [(ngModel)]="data.officeName">
+                          </ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Owner Name</ion-label>
+                <ion-input
+                           name="otherNames" 
+                           type="text" required 
+                           [(ngModel)]="data.otherNames">
+                          </ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label floating>First Name</ion-label>
+                  <ion-input 
+                    name="firstName" 
+                    type="text" required 
+                    [(ngModel)]="data.firstName">
+                  </ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label floating>Middle Name</ion-label>
+                  <ion-input
+                             name="middleName" 
+                             type="text" required 
+                             [(ngModel)]="data.middleName">
+                            </ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label floating>Last Name</ion-label>
+                    <ion-input 
+                               name="lastName" 
+                               type="text" required 
+                               [(ngModel)]="data.lastName">
+                              </ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label floating>Date of Birth: YYYY-MM-DD </ion-label>
+                  <ion-input type="tel" name="dateOfBirth" [(ngModel)]="data.dateOfBirth"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label floationg>Select ID Type</ion-label>
+                  <ion-select [(ngModel)]="data.idType" name="idType">
+                    <ion-option value="voter">Voter's ID</ion-option>
+                    <ion-option value="NHIS">NHIS ID</ion-option>
+                    <ion-option value="passport">Passport ID</ion-option>
+                    <ion-option value="national">National ID</ion-option>
+                  </ion-select>
+                </ion-item>
+                 <ion-item>
+                  <ion-label floating>Enter Selected ID</ion-label>
+                  <ion-input 
+                             name="idNo" 
+                             type="text" required 
+                             [(ngModel)]="data.idNo">
+                            </ion-input>
+                </ion-item>
+              <ion-item>
+                <ion-label floating>Phone number</ion-label>
+                <ion-input  
+                           name="mobile" 
+                           type="text" required 
+                           [(ngModel)]="data.mobile">
+                          </ion-input>
+              </ion-item>
+        
+              <ion-item>
+                <ion-label floating>Location</ion-label>
+                <ion-input placeholder="Location" 
+                           name="homeTown" 
+                           type="text" required 
+                           [(ngModel)]="data.homeTown">
+                          </ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Email</ion-label>
+                <ion-input  
+                           name="email" 
+                           type="email" 
+                           [(ngModel)]="data.email">
+                          </ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Website</ion-label>
+                <ion-input
+                            name="websiteUrl" 
+                            type="text" 
+                            [(ngModel)]="data.websiteUrl">
+                          </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Street</ion-label>
+                <ion-input 
+                           name="street" 
+                           type="text" required 
+                           [(ngModel)]="data.street">
+                          </ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label floating>City</ion-label>
+                  <ion-input 
+                             name="city" 
+                             type="text" required 
+                             [(ngModel)]="data.city">
+                            </ion-input>
+                </ion-item>
+        
+                <ion-item>
+                  <ion-label floating>State</ion-label>
+                  <ion-select [(ngModel)]="data.state">
+                    <ion-option value="greater accra">Greater Accra</ion-option>
+                    <ion-option value="upper east">Upper East</ion-option>
+                    <ion-option value="upper west">Upper West</ion-option>
+                    <ion-option value="northern region">Northern Region</ion-option>
+                    <ion-option value="eastern region">Eastern Region</ion-option>
+                    <ion-option value="western region">Western Region</ion-option>
+                    <ion-option value="brong ahafo">Brong Ahafo</ion-option>
+                    <ion-option value="ashanti region">Ashanti Region</ion-option>
+                    <ion-option value="volta region">Volta Region</ion-option>
+                    <ion-option value="central region">Central Region</ion-option>
+                  </ion-select>
+                </ion-item>
+              <ion-item>
+                  <ion-label floating>Country</ion-label>
+                  <ion-select [(ngModel)]="data.country" name="country">
+                    <ion-option value="Ghana">Ghana</ion-option>
+                    <ion-option value="Nigeria">Nigeria</ion-option>
+                  </ion-select>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      
+    <button ion-button type="submit" block>Update Data</button>
+  </form>
+</ion-content>

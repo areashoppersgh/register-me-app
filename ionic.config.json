@@ -1,0 +1,8 @@
+{
+  "name": "register-me",
+  "app_id": "fdcdacf0",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

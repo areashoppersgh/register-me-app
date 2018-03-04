@@ -1,0 +1,654 @@
+{
+    "items": [
+        { 
+            "name": "Egal Agents",
+            "children": [
+                {
+                    "name": "Egal Directories",
+                    "information": "All Econnect Global Africa Agents registraton",
+                    "price": "25",
+                    "group": "Egal Agents",
+                    "icon": ""
+                }
+            ]
+        },
+        { 
+            "name": "Ecobank",
+            "children": [
+                {
+                    "name": "Ecobank Xpress Account",
+                    "information": "Create and instance account with Ecobank",
+                    "price": "25",
+                    "group": "Ecobank",
+                    "icon": ""
+                }
+            ]
+        },
+        {
+            "name": "Artisans",
+            "children": [
+                {
+                    "name": "Electrician",
+                    "information": "A tradesperson specializing in electrical wiring of buildings",
+                    "price": "25",
+                    "group": "Artisans"
+                },
+                {
+                    "name": "Plumber",
+                    "information": "A tradesperson who specializes in installing and maintenance ",
+                    "price": "19 ",
+                    "group": "Artisans"
+                },
+                {
+                    "name": "Carpenter",
+                    "information": "A skilled trade in performing cutting, shaping and installation",
+                    "price": "19 ",
+                    "group": "Artisans"
+                },
+                {
+                    "name": "Painter",
+                    "information": "The practice of applying paint, pigment, color to a solid surface. ",
+                    "price": "19 ",
+                    "group": "Artisans"
+                },
+                {
+                    "name": "Merchanic",
+                    "information": "A mechanic is a tradesman, craftsman, or technician who uses tools to build or repair machinery. ",
+                    "price": "19 ",
+                    "group": "Artisans",
+                    "icon":""
+                },
+                {
+                    "name": "Welder",
+                    "information": "A welder or lit operator is a tradesperson who specializes in fusing materials together.",
+                    "price": "19 ",
+                    "group": "Artisans",
+                    "icon":""
+                },
+                {
+                    "name": "Coffin Makers",
+                    "information": "People who makes coffins in unique shapes and styles. Coke bottles, cars etc.",
+                    "price": "19 ",
+                    "group": "Artisans",
+                    "icon":""
+                },
+                {
+                    "name": "Shoemaker(cobbler)",
+                    "information": "A person who make and mends shoes..",
+                    "price": "19 ",
+                    "group": "Artisans",
+                    "icon":""
+                },
+                {
+                    "name": "Mason",
+                    "information": "a person whose trade is building with units of various natural or artificial mineral products, as stones",
+                    "price": "19 ",
+                    "group": "Artisans",
+                    "icon":""
+                }
+                
+            ]
+        },
+        {
+            "name": "Mobile Money Service",
+            "children": [
+                {
+                    "name": "Sikafone Agent",
+                    "information": "Agents responsible for convenient and secure way of transferring money, payments and doing other transactions using a Sikafone",
+                    "price": "25",
+                    "group": "Mobile Money Service",
+                    "icon": ""
+                },
+                {
+                    "name": "Other Mobile Money",
+                    "information": "A certified agents to ensure customers have a good experience with Mobile Money Services",
+                    "price": "19 ",
+                    "group": "Mobile Money Service",
+                    "icon": ""
+                }
+            ]
+        },
+        {
+            "name": "Food And Agriculture",
+            "children": [
+                {
+                    "name": "Butcher",
+                    "information": "A person who may slaughter animals, dress their flesh",
+                    "price": "19 ",
+                    "group": "Food And Agriculture"
+                },
+                {
+                    "name": "Farmer",
+                    "information": "People engaged in agriculture, raising living organisms.",
+                    "price": "25",
+                    "group": "Food And Agriculture"
+                },
+                {
+                    "name": "Food Vendor",
+                    "information": "Street food is ready-to-eat food or drink sold by a hawker",
+                    "price": "19 ",
+                    "group": "Food And Agriculture"
+                },
+                {
+                    "name": "Fisherman",
+                    "information": "A person who catches fish for a living or for sport.",
+                    "price": "19 ",
+                    "group": "Food And Agriculture"
+                },
+                {
+                    "name": "Fruit Vendor",
+                    "information": "Sell primarily open-air business venue that sells seasonal fruit and many fruit products from local growers",
+                    "price": "19 ",
+                    "group": "Food And Agriculture"
+                },
+                {
+                    "name": "Petty Food Joints",
+                    "information": "Street food is ready-to-eat food or drink sold by a hawker",
+                    "price": "19 ",
+                    "group": "Food And Agriculture"
+                },
+                {
+                    "name": "Poultry Breeder",
+                    "information": "The breeder farm produces fertile eggs that will be hatched in a hatchery.",
+                    "price": "19 ",
+                    "group": "Food And Agriculture"
+                },
+                {
+                    "name": "Restaurant",
+                    "information": "The best restaurants for breakfast, lunch, dinner, snacks and traditional dining",
+                    "price": "19 ",
+                    "group": "Food And Agriculture",
+                    "icon":""
+                }
+            ]
+        },
+      
+        {
+            "name": "Security Service",
+            "children": [
+                {
+                    "name": "Police Station",
+                    "information": " police officers and other members of staff.",
+                    "price": "25",
+                    "group": "Security Service",
+                    "icon":""
+                },
+                {
+                    "name": "Fire Service",
+                    "information": "Rescue service agency under ministry of interior",
+                    "price": "19",
+                    "group": "Security Service",
+                    "icon":""
+                },
+                {
+                    "name": "Ambulance Service",
+                    "information": " police officers and other members of staff.",
+                    "price": "25",
+                    "group": "Security Service",
+                    "icon":""
+                },
+                {
+                    "name": "Security Guards",
+                    "information": "Rescue service agency under ministry of interior",
+                    "price": "19",
+                    "group": "Security Service",
+                    "icon":""
+                },
+                {
+                    "name": "Immigration",
+                    "information": "Citizenship service, passport regulations",
+                    "price": "19",
+                    "group": "Security Service",
+                    "icon":""
+                }
+            ]
+        },
+        {
+            "name": "Human Service",
+            "children": [
+                {
+                    "name": "Cooks",
+                    "information": "A cook is a person who prepares food for consumption. A cook is sometimes referred to as a chef.",
+                    "price": "25",
+                    "group": "Human Service",
+                    "icon":""
+                },
+                {
+                    "name": "General Deliveries",
+                    "information": "People carrying and turning over of letters, goods, etc., to a designated recipient or recipients",
+                    "price": "19 ",
+                    "group": "Human Service",
+                    "icon":""
+                },
+                {
+                    "name": "Fashion Designer",
+                    "information": "A skilled trade in performing cutting, shaping and installation",
+                    "price": "19 ",
+                    "group": "Human Service",
+                    "icon":""
+                },
+                {
+                    "name": "Hairdressers",
+                    "information": "The practice of applying paint, pigment, color to a solid surface. ",
+                    "price": "19 ",
+                    "group": "Human Service",
+                    "icon":""
+                },
+                {
+                    "name": "Barber",
+                    "information": "A mechanic is a tradesman, craftsman, or technician who uses tools to build or repair machinery. ",
+                    "price": "19 ",
+                    "group": "Human Service",
+                    "icon":""
+                },
+                {
+                    "name": "Cleaners",
+                    "information": "A welder or lit operator is a tradesperson who specializes in fusing materials together.",
+                    "price": "19 ",
+                    "group": "Human Service",
+                    "icon":""
+                },
+                {
+                    "name": "Gardeners",
+                    "information": "People responsible for gardening from residential garden and the homes",
+                    "price": "19 ",
+                    "group": "Human Service",
+                    "icon":""
+                },
+                {
+                    "name": "Makeup Artist",
+                    "information": "A make-up artist is an artist whose medium is the human body, applying makeup and prosthetics for theatrical, television",
+                    "price": "19 ",
+                    "group": "Human Service",
+                    "icon":""
+                },
+                {
+                    "name": "Seamstress",
+                    "information": "a woman who sews, especially one who earns her living by sewing.",
+                    "price": "19 ",
+                    "group": "Human Service",
+                    "icon":""
+                },
+                {
+                    "name": "Tailor",
+                    "information": "A man who sews, especially one who earns her living by sewing.",
+                    "price": "19 ",
+                    "group": "Human Service",
+                    "icon":""
+                }
+            ]
+        },
+        {
+            "name": "Merchants and Traders",
+            "children": [
+                {
+                    "name": "Petty Traders",
+                    "information": "Traders conducting on a small scale, sale of small inexpensive items.",
+                    "price": "25",
+                    "group": "Merchants and Traders",
+                    "icon":""
+                },
+                {
+                    "name": "Spare Parts Dealer",
+                    "information": "Sell and buy all kinds of heavy duty or light car spare parts",
+                    "price": "19 ",
+                    "group": "Merchants and Traders",
+                    "icon":""
+                },
+                {
+                    "name": "Supermarkets",
+                    "information": "Is self-service shop offering a wide variety of food and household products, organized into aisles.",
+                    "price": "19 ",
+                    "group": "Merchants and Traders",
+                    "icon":""
+                },
+                {
+                    "name": "Canopy and Chair Rentals",
+                    "information": "Canopies, Chairs & All Kinds, tent, chairs, tables, cutlery set and many other rental services ",
+                    "price": "19 ",
+                    "group": "Merchants and Traders",
+                    "icon":""
+                },
+                {
+                    "name": "Laundry",
+                    "information": "A Shop for washing cloths and other textiles",
+                    "price": "19 ",
+                    "group": "Merchants and Traders",
+                    "icon":""
+                },
+                {
+                    "name": "Building Materials",
+                    "information": "Shop selling materials for building construction.",
+                    "price": "19 ",
+                    "group": "Merchants and Traders",
+                    "icon":""
+                },
+                {
+                    "name": "Salons",
+                    "information": "Is an establishment dealing with cosmetic treatments for men and women. ",
+                    "price": "19 ",
+                    "group": "Merchants and Traders",
+                    "icon":""
+                },
+                {
+                    "name": "Boutiques",
+                    "information": "A small store that sells stylish clothing, jewelry, or other usually luxury goods",
+                    "price": "19 ",
+                    "group": "Merchants and Traders",
+                    "icon":""
+                },
+                {
+                    "name": "Cosmetics Shop",
+                    "information": "Shop for affordable, high quality cosmetics both online and land.",
+                    "price": "19 ",
+                    "group": "Merchants and Traders",
+                    "icon":""
+                },
+                {
+                    "name": "Agro-chemical Shop",
+                    "information": "Shopping chemicals for farm land farm products",
+                    "price": "19 ",
+                    "group": "Merchants and Traders",
+                    "icon":""
+                },
+                {
+                    "name": "Shops",
+                    "information": "Any other shops not available now in this directory",
+                    "price": "19 ",
+                    "group": "Merchants and Traders",
+                    "icon":""
+                }
+            ]
+        },
+        {
+            "name": "Health",
+            "children": [
+                {
+                    "name": "Hospital",
+                    "information": "A health care institution providing patient treatment with specialized medical and nursing staff and medical equipment",
+                    "price": "25",
+                    "group": "Health",
+                    "icon":""
+                },
+                {
+                    "name": "Clinic",
+                    "information": " a healthcare facility that is primarily focused on the care of outpatients. Clinics can be privately operated or publicly managed and funded.",
+                    "price": "19",
+                    "group": "Health",
+                    "icon":""
+                },
+                {
+                    "name": "Herbal Center",
+                    "information": "Centers practicing of the medicinal and therapeutic use of plants.",
+                    "price": "19",
+                    "group": "Health",
+                    "icon":""
+                },
+                {
+                    "name": "Pharmacy",
+                    "information": "Pharmacy is the science and technique of preparing and dispensing drugs",
+                    "price": "19",
+                    "group": "Health",
+                    "icon":""
+                }
+            ]
+        },
+        {
+            "name": "Professionals",
+            "children": [
+                {
+                    "name": "All",
+                    "children": [
+                        {
+                            "name": "Computer Engineer",
+                            "information": "A discipline that develop computer hardware and software.",
+                            "price": "10",
+                            "group": "Professionals",
+                            "icon":""
+                        },
+                        {
+                            "name": "Counselor",
+                            "information": "A person whose job is to provide advice, help, or encouragement",
+                            "price": "12",
+                            "group": "Professionals",
+                            "icon":""
+                        },
+                        {
+                            "name": "Banker",
+                            "information": "One who conducts the business of banking as a member of a company",
+                            "price": "12",
+                            "group": "Professionals",
+                            "icon":""
+                        },
+                        {
+                            "name": "Administrator",
+                            "information": "People who are responsible for carrying out the administration of a business.",
+                            "price": "12",
+                            "group": "Professionals",
+                            "icon":""
+                        },
+                        {
+                            "name": "Journalist",
+                            "information": "A person who collects, writes, or distributes news, current information.",
+                            "price": "12",
+                            "group": "Professionals",
+                            "icon":""
+                        }
+                    ]
+                },
+                {
+                    "name": "Civil",
+                    "children": [
+                        {
+                            "name": "Lawyer",
+                            "information": "People who practices law, as a paralegal, advocate, barrister, attorney, counselor, solicitor",
+                            "price": "12",
+                            "group": "Professionals",
+                            "icon":""
+                        },
+                        {
+                            "name": "Doctor",
+                            "information": "Professional who practises medicine, which is concerned with promoting, restoring health through the study",
+                            "price": "12",
+                            "group": "Professionals",
+                            "icon":""
+                        },
+                        {
+                            "name": "Nurse",
+                            "information": "Profession focused on the care for people and help to recover optimal health and quality of life",
+                            "price": "12",
+                            "group": "Professionals",
+                            "icon":""
+                        },
+                        {
+                            "name": "Teacher",
+                            "information": "A person who helps others to acquire knowledge, competences or values",
+                            "price": "12",
+                            "group": "Professionals",
+                            "icon":""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Educational",
+            "children": [
+                {
+                    "name": "Formal",
+                    "children": [
+                        {
+                            "name": "Tertiary",
+                            "information": "post-secondary education, is the educational level following the completion of a school providing a secondary education.",
+                            "price": "10",
+                            "group": "Educational"
+                        },
+                        {
+                            "name": "High schools",
+                            "information": "A secondary school is both an organization that provides secondary education",
+                            "price": "12",
+                            "group": "Educational"
+
+                        },
+                        {
+                            "name": "Junior High schools",
+                            "information": "A middle school is an educational stage which exists in some countries, providing education between primary school and high school.",
+                            "price": "12",
+                            "group": "Educational"
+
+                        },
+                        {
+                            "name": "Training Institutions",
+                            "information": "Public or private institution of higher education which has implemented a training program for public school teachers designed to improve skills",
+                            "price": "12",
+                            "group": "Educational"
+
+                        }
+                    ]
+                },
+                {
+                    "name": "Skilled",
+                    "children": [
+                        {
+                            "name": "Vocational",
+                            "information": "Prepares people to work in various jobs, such as a trade, a craft, or as a technician.",
+                            "price": "13",
+                            "group": "Educational"
+
+                        },
+                        {
+                            "name": "Technical",
+                            "information": " institutions, and educational programs that specialize in the skilled trades, applied sciences, modern technologies, and career preparation.",
+                            "price": "14",
+                            "group": "Educational"
+
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Creative Arts",
+            "children": [
+                {
+                    "name": "Photographer",
+                    "information": "A photographer is a person who makes photographs",
+                    "price": "10",
+                    "group":"Creative Arts",
+                    "icon":""
+                },
+
+                {
+                    "name": "Decor",
+                    "information": "People who are responsible for the furnishing and decoration of a room and ceremonies.",
+                    "price": "12",
+                    "group":"Creative Arts",
+                    "icon":""
+                },
+                {
+                    "name": "Internet Cafe",
+                    "information": "A place for internet access and informaton enquiry",
+                    "price": "13",
+                    "group":"Creative Arts",
+                    "icon":""
+                },
+                {
+                    "name": "Newsstands",
+                    "information": "a stand or stall for the sale of newspapers.",
+                    "price": "14",
+                    "group":"Creative Arts",
+                    "icon":""
+                },
+                {
+                    "name": "Information Centers",
+                    "information": "An center designed specifically for storing, processing, and retrieving information for dissemination at regular intervals",
+                    "price": "11",
+                    "group":"Creative Arts",
+                    "icon":""
+                },
+                {
+                    "name": "Media House",
+                    "information": "Is a multi-platform media company with a focus on sports, culture, and lifestyle. As an umbrella brand.",
+                    "price": "14",
+                    "group":"Creative Arts",
+                    "icon":""
+                },
+                {
+                    "name": "Printing Press",
+                    "information": "A place operating printing press upon a print medium thereby transferring the ink.",
+                    "price": "14",
+                    "group":"Creative Arts",
+                    "icon":""
+                }
+            ]
+        },
+        {
+            "name": "Transport/Travel and Tour",
+            "children": [
+                {
+                    "name": "Car Rentals",
+                    "information": "Car Rentals",
+                    "price": "10",
+                    "group":"Transport/Travel and Tour",
+                    "icon":""
+                },
+
+                {
+                    "name": "Ticketing",
+                    "information": "Bus ticketing or events ticketing",
+                    "price": "12",
+                    "group":"Transport/Travel and Tour",
+                    "icon":""
+                },
+                {
+                    "name": "Travel and Tour Agents",
+                    "information": "Office or people facilitating travel and tour process",
+                    "price": "13",
+                    "group":"Transport/Travel and Tour",
+                    "icon":""
+                },
+                {
+                    "name": "Car Sales",
+                    "information": "All cars buying and selling",
+                    "price": "14",
+                    "group":"Transport/Travel and Tour",
+                    "icon":""
+                },
+                {
+                    "name": "Trotro/Taxi stations",
+                    "information": "trotro/taxi stations",
+                    "price": "11",
+                    "group":"Transport/Travel and Tour",
+                    "icon":""
+                },
+                {
+                    "name": "Train station",
+                    "information": "Train Stations",
+                    "price": "14",
+                    "group":"Transport/Travel and Tour",
+                    "icon":""
+                }
+            ]
+        },
+        {
+            "name": "Fuel And Gas Station",
+            "children": [
+                {
+                    "name": "Filling Station",
+                    "information": "A filling station is a facility that sells fuel and engine lubricants for motor vehicles",
+                    "price": "10",
+                    "group":"Fuel And Gas Station",
+                    "icon":""
+                },
+                {
+                    "name": "LPG Station",
+                    "information": "Liquefied petroleum gas or LPG auto gas stations",
+                    "price": "10",
+                    "group":"Fuel And Gas Station",
+                    "icon":""
+                }
+               
+            ]
+        }
+    ]
+}

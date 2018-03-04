@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar color="hcolor">
+    <ion-title>
+      Offline Register
+    </ion-title>
+    <!-- <ion-buttons end>
+      <button ion-button icon-only (click)="addData()">
+        <ion-icon name="add-circle"></ion-icon>
+        New 
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h5>Pending.. geocode: <span >{{latitude}} , {{longitude}}</span></h5>
+
+  <ion-list *ngFor="let expense of expenses; let i=index">
+    <ion-item-sliding  *ngIf="(userId == expense.userId)">
+      <ion-item>
+        <ion-thumbnail class="profile-image" item-start>
+          <img src="{{expense.fileUpload}}">
+        </ion-thumbnail>
+        <h2>{{expense.findMeId}}</h2>
+        <p>{{expense.mobile}}</p>
+        <p>{{expense.directory}}</p>
+        <button ion-button clear item-end (click)="uploadOnline(expense)">
+            <ion-icon name="cloud-upload"></ion-icon> Send
+        </button>
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button color="primary" (click)="editData(expense.rowid)">
+          <ion-icon name="paper"></ion-icon> Edit
+        </button>
+        <button ion-button color="danger" (click)="deleteData(expense.rowid)">
+          <ion-icon name="trash"></ion-icon> Delete
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <!-- <ion-fab  right middle>
+    <button ion-fab color="danger" (click)="addData()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab> -->
+
+  <ion-fab right middle>
+      <button ion-fab color="danger"><ion-icon name="arrow-up"></ion-icon></button>
+      <ion-fab-list side="left">
+        
+        <button ion-fab (click)="addData()">Other</button>
+        <button ion-fab>Eco</button>
+      </ion-fab-list>
+    </ion-fab>
+</ion-content>

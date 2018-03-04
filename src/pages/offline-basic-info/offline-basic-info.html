@@ -1,0 +1,84 @@
+<!--
+  Generated template for the OfflineBasicInfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Basic info (Offline)</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class='work-area'>
+   
+  <form [formGroup]='basic'>
+    <ion-list >
+        <ion-avatar item-left [hidden]="lastImage == null">
+          <img src="{{pathForImage(lastImage)}}" height="200px" width="100%">
+        </ion-avatar>
+        <ion-avatar item-left [hidden]="lastImage !== null">
+            <ion-fab top right (click)="presentActionSheet()">
+                <button color="warning" ion-fab mini><ion-icon name="camera"></ion-icon></button>
+            </ion-fab>
+            <img src="assets/imgs/no-pic.png" height="150px" width="100%" >
+          </ion-avatar>
+        <ion-item>
+            <ion-label floating>Surname</ion-label>
+            <ion-input type="text" formControlName="surname" [class.invalid]="!basic.controls.surname.valid && (basic.controls.surname.dirty || submitAttempt)"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="!basic.controls.surname.valid  && (basic.controls.surname.dirty || submitAttempt)">
+            <p>At leaast two characters is required</p>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Othernames</ion-label>
+            <ion-input type="text" formControlName="othernames"  [class.invalid]="!basic.controls.othernames.valid && (basic.controls.othernames.dirty || submitAttempt)"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="!basic.controls.othernames.valid  && (basic.controls.othernames.dirty || submitAttempt)">
+            <p>At leaast two characters is required</p>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Gender</ion-label>
+            <ion-select formControlName="gender" [class.invalid]="!basic.controls.gender.valid && (basic.controls.gender.dirty || submitAttempt)"  >
+              <ion-option value="female">Female</ion-option>
+              <ion-option value="male">Male</ion-option>
+            </ion-select>
+          </ion-item>
+        <ion-item *ngIf="!basic.controls.gender.valid  && (basic.controls.gender.dirty || submitAttempt)">
+            <p>Please choose gender from list</p>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input type="text" formControlName="email" [class.invalid]="!basic.controls.email.valid && (basic.controls.email.dirty || submitAttempt)"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="!basic.controls.email.valid  && (basic.controls.email.dirty || submitAttempt)">
+            <p>Provide a valid email pattern</p>
+        </ion-item>
+        <ion-item>
+            <ion-label >Date of Birth</ion-label>
+            <ion-input type="date" formControlName="dob" [class.invalid]="!basic.controls.dob.valid && (basic.controls.dob.dirty || submitAttempt)"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="!basic.controls.dob.valid  && (basic.controls.dob.dirty || submitAttempt)">
+            <p>Date of Birth is required</p>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Phone number</ion-label>
+            <ion-input type="text" formControlName="phone" [class.invalid]="!basic.controls.phone.valid && (basic.controls.phone.dirty || submitAttempt)"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="!basic.controls.phone.valid  && (basic.controls.phone.dirty || submitAttempt)">
+            <p>Phone number must at least 10 digits</p>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="text" formControlName="password" [class.invalid]="!basic.controls.password.valid && (basic.controls.password.dirty || submitAttempt)"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="!basic.controls.password.valid  && (basic.controls.password.dirty || submitAttempt)">
+            <p>Password must be at least 5 characters</p>
+        </ion-item>
+    </ion-list>
+    <button *ngIf="basic.valid"  ion-button block color="secondary" (click)='saveBasic()' >Save</button>
+  </form>
+</ion-content>
