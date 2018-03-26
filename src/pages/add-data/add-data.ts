@@ -22,7 +22,8 @@ export class AddDataPage {
   lastImage: string = null;
   loading: Loading;
   imageUrl:string='null';
-  data = { userId:"", findMeId:"", officeName:"", otherNames:"", mobile:"", directory:"", latitude:"", longitude:"",location:"", gender:"", fileUpload:"",otherInfo:""};
+  // data = { userId:"", findMeId:"", officeName:"", otherNames:"", mobile:"", directory:"", latitude:"", longitude:"",location:"", gender:"", fileUpload:"",otherInfo:""};
+  data = { userId:"", findMeId:"", officeName:"", firstName:"", middleName:"", lastName:"", otherNames:"", dateOfBirth:"", idType:"", idNo:"", email:"", mobile:"", directory:"", latitude:"", longitude:"",location:"", gender:"", street:"", city:"", state:"", country:"", maritalStatus:"", homeTown:"", landSize:"", fileUpload:"",otherInfo:""};
   // data = { date:"", type:"", description:"", amount:0 };
   latitude: any='';
   longitude: any="";
@@ -154,17 +155,30 @@ public pathForImage(img) {
       name: 'ionicdb.db',
       location: 'default'
     }).then((db: SQLiteObject) => {
-      db.executeSql('INSERT INTO tester VALUES(NULL,?,?,?,?,?,?,?,?,?,?,?,?)',[
+      db.executeSql('INSERT INTO tester VALUES(NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',[
         this.data.userId,
         this.data.findMeId,
         this.data.officeName,
+        this.data.firstName,
+        this.data.middleName,
+        this.data.lastName,
         this.data.otherNames,
+        this.data.dateOfBirth,
+        this.data.idType,
+        this.data.idNo,
+        this.data.email,
         this.data.mobile,
         this.data.directory,
         this.data.latitude,
         this.data.longitude,
         this.data.location,
         this.data.gender,
+        this.data.street,
+        this.data.city,
+        this.data.state,
+        this.data.country,
+        this.data.homeTown,
+        this.data.landSize,
         this.data.fileUpload,
         this.data.otherInfo
       ]).then(res => {

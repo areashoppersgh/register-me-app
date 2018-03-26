@@ -9,34 +9,42 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding *ngIf="electricianForm"> 
+<ion-content padding *ngIf="electricianForm">
   <!-- <h2>Add Merchant</h2> -->
   <ion-row>
     <ion-col>
       <ion-list inset>
         <ion-item>
           <ion-label>FindMeId</ion-label>
-          <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required="" ></ion-input>
+          <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required=""></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="text" 
-              placeholder="Shop Name" 
-              name="officeName"  
-              [(ngModel)]="formValues.officeName" >
+          <ion-input type="text" placeholder="Shop Name" name="officeName" [(ngModel)]="formValues.officeName">
           </ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="text" 
-                     placeholder="Shop owner" 
-                     name="otherNames"  
-                     [(ngModel)]="formValues.otherNames" >
-                  </ion-input>
+          <ion-input type="text" placeholder="Shop owner" name="otherNames" [(ngModel)]="formValues.otherNames">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="First Name" name="firstName" type="text" required [(ngModel)]="formValues.firstName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Middle Name</ion-label>
+          <ion-input name="middleName" type="text" required [(ngModel)]="formValues.middleName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Last Name</ion-label>
+          <ion-input name="lastName" type="text" required [(ngModel)]="formValues.lastName">
+          </ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Date of Birth: YYYY-MM-DD </ion-label>
           <ion-input type="tel" name="dateOfBirth" displayFormat="YYYY/MM/DD                              " [(ngModel)]="formValues.dateOfBirth"></ion-input>
         </ion-item>
-  
+
         <ion-item>
           <ion-label>Id Type</ion-label>
           <ion-select [(ngModel)]="formValues.idType">
@@ -46,20 +54,14 @@
             <ion-option value="national">National ID</ion-option>
           </ion-select>
         </ion-item>
-         <ion-item>
+        <ion-item>
           <ion-label floating>Enter Selected ID</ion-label>
-          <ion-input 
-                     name="idNo" 
-                     type="text" required 
-                     [(ngModel)]="formValues.idNo">
-                    </ion-input>
+          <ion-input name="idNo" type="text" required [(ngModel)]="formValues.idNo">
+          </ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="text" 
-                     placeholder="Contact Number" 
-                     name="mobile"  
-                     [(ngModel)]="formValues.mobile" >
-                  </ion-input>
+          <ion-input type="text" placeholder="Contact Number" name="mobile" [(ngModel)]="formValues.mobile">
+          </ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Gender</ion-label>
@@ -69,28 +71,19 @@
           </ion-select>
         </ion-item>
         <ion-item>
-          <ion-input type="email" 
-                    placeholder="Email" 
-                    name="email"  
-                    [(ngModel)]="formValues.email" >
-                 </ion-input>
-       </ion-item>
+          <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="formValues.email">
+          </ion-input>
+        </ion-item>
 
-       <ion-item>
-        <ion-label floating>Street</ion-label>
-        <ion-input 
-                   name="location" 
-                   type="text" required 
-                   [(ngModel)]="formValues.location">
-                  </ion-input>
-      </ion-item>
-      <ion-item>
+        <ion-item>
+          <ion-label floating>Street</ion-label>
+          <ion-input name="location" type="text" required [(ngModel)]="formValues.location">
+          </ion-input>
+        </ion-item>
+        <ion-item>
           <ion-label floating>City</ion-label>
-          <ion-input 
-                     name="city" 
-                     type="text" required 
-                     [(ngModel)]="formValues.city">
-                    </ion-input>
+          <ion-input name="city" type="text" required [(ngModel)]="formValues.city">
+          </ion-input>
         </ion-item>
 
         <ion-item>
@@ -108,19 +101,20 @@
             <ion-option value="central region">Central Region</ion-option>
           </ion-select>
         </ion-item>
-      <ion-item>
+        <ion-item>
           <ion-label floating>Country</ion-label>
           <ion-select [(ngModel)]="formValues.country">
             <ion-option value="Ghana">Ghana</ion-option>
             <ion-option value="Nigeria">Nigeria</ion-option>
           </ion-select>
-      </ion-item>
-       <ion-item>
-         <button ion-button round color="primary" (click)="takePicture()" full>
-           <ion-icon name="md-camera"></ion-icon>
-         </button>
-       </ion-item>
-        
+        </ion-item>
+
+        <ion-item>
+          <button ion-button round color="primary" (click)="takePicture()" full>
+            <ion-icon name="md-camera"></ion-icon>
+          </button>
+        </ion-item>
+
       </ion-list>
     </ion-col>
   </ion-row>
@@ -134,29 +128,37 @@
   <ion-row>
     <ion-col>
       <ion-list inset>
-          <ion-item>
-              <ion-label>FindMeId</ion-label>
-              <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required="" ></ion-input>
-            </ion-item>
         <ion-item>
-          <ion-input placeholder="Company Name" 
-          name="officeName" 
-          type="text" required 
-          [(ngModel)]="formValues.officeName">
-        </ion-input>
+          <ion-label>FindMeId</ion-label>
+          <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required=""></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Worker Name" 
-                     name="otherNames" 
-                     type="text" required 
-                     [(ngModel)]="formValues.otherNames">
-                    </ion-input>
+          <ion-input placeholder="Company Name" name="officeName" type="text" required [(ngModel)]="formValues.officeName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Worker Name" name="otherNames" type="text" required [(ngModel)]="formValues.otherNames">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="First Name" name="firstName" type="text" required [(ngModel)]="formValues.firstName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Middle Name</ion-label>
+          <ion-input name="middleName" type="text" required [(ngModel)]="formValues.middleName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Last Name</ion-label>
+          <ion-input name="lastName" type="text" required [(ngModel)]="formValues.lastName">
+          </ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Date of Birth: YYYY-MM-DD </ion-label>
           <ion-input type="tel" name="dateOfBirth" displayFormat="YYYY/MM/DD                              " [(ngModel)]="formValues.dateOfBirth"></ion-input>
         </ion-item>
-  
+
         <ion-item>
           <ion-label>Id Type</ion-label>
           <ion-select [(ngModel)]="formValues.idType">
@@ -166,20 +168,14 @@
             <ion-option value="national">National ID</ion-option>
           </ion-select>
         </ion-item>
-         <ion-item>
+        <ion-item>
           <ion-label floating>Enter Selected ID</ion-label>
-          <ion-input 
-                     name="idNo" 
-                     type="text" required 
-                     [(ngModel)]="formValues.idNo">
-                    </ion-input>
+          <ion-input name="idNo" type="text" required [(ngModel)]="formValues.idNo">
+          </ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Contact Number" 
-                     name="mobile" 
-                     type="text" required 
-                     [(ngModel)]="formValues.mobile">
-                    </ion-input>
+          <ion-input placeholder="Contact Number" name="mobile" type="text" required [(ngModel)]="formValues.mobile">
+          </ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Gender</ion-label>
@@ -188,45 +184,39 @@
             <ion-option value="male">Male</ion-option>
           </ion-select>
         </ion-item>
-      
+
         <ion-item>
           <ion-label floating>Street</ion-label>
-          <ion-input 
-                     name="location" 
-                     type="text" required 
-                     [(ngModel)]="formValues.location">
-                    </ion-input>
+          <ion-input name="location" type="text" required [(ngModel)]="formValues.location">
+          </ion-input>
         </ion-item>
         <ion-item>
-            <ion-label floating>City</ion-label>
-            <ion-input 
-                       name="city" 
-                       type="text" required 
-                       [(ngModel)]="formValues.city">
-                      </ion-input>
-          </ion-item>
+          <ion-label floating>City</ion-label>
+          <ion-input name="city" type="text" required [(ngModel)]="formValues.city">
+          </ion-input>
+        </ion-item>
 
-          <ion-item>
-            <ion-label floating>State</ion-label>
-            <ion-select [(ngModel)]="formValues.state">
-              <ion-option value="greater accra">Greater Accra</ion-option>
-              <ion-option value="upper east">Upper East</ion-option>
-              <ion-option value="upper west">Upper West</ion-option>
-              <ion-option value="northern region">Northern Region</ion-option>
-              <ion-option value="eastern region">Eastern Region</ion-option>
-              <ion-option value="western region">Western Region</ion-option>
-              <ion-option value="brong ahafo">Brong Ahafo</ion-option>
-              <ion-option value="ashanti region">Ashanti Region</ion-option>
-              <ion-option value="volta region">Volta Region</ion-option>
-              <ion-option value="central region">Central Region</ion-option>
-            </ion-select>
-          </ion-item>
         <ion-item>
-            <ion-label floating>Country</ion-label>
-            <ion-select [(ngModel)]="formValues.country">
-              <ion-option value="Ghana">Ghana</ion-option>
-              <ion-option value="Nigeria">Nigeria</ion-option>
-            </ion-select>
+          <ion-label floating>State</ion-label>
+          <ion-select [(ngModel)]="formValues.state">
+            <ion-option value="greater accra">Greater Accra</ion-option>
+            <ion-option value="upper east">Upper East</ion-option>
+            <ion-option value="upper west">Upper West</ion-option>
+            <ion-option value="northern region">Northern Region</ion-option>
+            <ion-option value="eastern region">Eastern Region</ion-option>
+            <ion-option value="western region">Western Region</ion-option>
+            <ion-option value="brong ahafo">Brong Ahafo</ion-option>
+            <ion-option value="ashanti region">Ashanti Region</ion-option>
+            <ion-option value="volta region">Volta Region</ion-option>
+            <ion-option value="central region">Central Region</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Country</ion-label>
+          <ion-select [(ngModel)]="formValues.country">
+            <ion-option value="Ghana">Ghana</ion-option>
+            <ion-option value="Nigeria">Nigeria</ion-option>
+          </ion-select>
         </ion-item>
         <ion-item>
           <button ion-button round color="primary" (click)="takePicture()" full>
@@ -251,16 +241,27 @@
   <ion-row>
     <ion-col>
       <ion-list inset>
-          <ion-item>
-              <ion-label>FindMeId</ion-label>
-              <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required="" ></ion-input>
-            </ion-item>
         <ion-item>
-          <ion-input placeholder={{selectedName}} 
-                     name="officeName" 
-                     type="text" required 
-                     [(ngModel)]="formValues.officeName">
-                    </ion-input>
+          <ion-label>FindMeId</ion-label>
+          <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required=""></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder={{selectedName}} name="officeName" type="text" required [(ngModel)]="formValues.officeName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="First Name" name="firstName" type="text" required [(ngModel)]="formValues.firstName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Middle Name</ion-label>
+          <ion-input name="middleName" type="text" required [(ngModel)]="formValues.middleName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Last Name</ion-label>
+          <ion-input name="lastName" type="text" required [(ngModel)]="formValues.lastName">
+          </ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Date of Birth: YYYY-MM-DD </ion-label>
@@ -275,20 +276,14 @@
             <ion-option value="national">National ID</ion-option>
           </ion-select>
         </ion-item>
-         <ion-item>
+        <ion-item>
           <ion-label floating>Enter Selected ID number</ion-label>
-          <ion-input 
-                     name="idNo" 
-                     type="text" required 
-                     [(ngModel)]="formValues.idNo">
-                    </ion-input>
+          <ion-input name="idNo" type="text" required [(ngModel)]="formValues.idNo">
+          </ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Contact Number" 
-                     name="mobile" 
-                     type="text" required 
-                     [(ngModel)]="formValues.mobile">
-                    </ion-input>
+          <ion-input placeholder="Contact Number" name="mobile" type="text" required [(ngModel)]="formValues.mobile">
+          </ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Gender</ion-label>
@@ -298,50 +293,41 @@
           </ion-select>
         </ion-item>
         <ion-item>
-          <ion-textarea placeholder="Items" 
-                     name="otherInfo" 
-                     type="text" 
-                     [(ngModel)]="formValues.otherInfo">
+          <ion-textarea placeholder="Items" name="otherInfo" type="text" [(ngModel)]="formValues.otherInfo">
           </ion-textarea>
         </ion-item>
         <ion-item>
           <ion-label floating>Street</ion-label>
-          <ion-input 
-                     name="location" 
-                     type="text" required 
-                     [(ngModel)]="formValues.location">
-                    </ion-input>
+          <ion-input name="location" type="text" required [(ngModel)]="formValues.location">
+          </ion-input>
         </ion-item>
         <ion-item>
-            <ion-label floating>City</ion-label>
-            <ion-input 
-                       name="city" 
-                       type="text" required 
-                       [(ngModel)]="formValues.city">
-                      </ion-input>
-          </ion-item>
+          <ion-label floating>City</ion-label>
+          <ion-input name="city" type="text" required [(ngModel)]="formValues.city">
+          </ion-input>
+        </ion-item>
 
-          <ion-item>
-            <ion-label floating>State</ion-label>
-            <ion-select [(ngModel)]="formValues.state">
-              <ion-option value="greater accra">Greater Accra</ion-option>
-              <ion-option value="upper east">Upper East</ion-option>
-              <ion-option value="upper west">Upper West</ion-option>
-              <ion-option value="northern region">Northern Region</ion-option>
-              <ion-option value="eastern region">Eastern Region</ion-option>
-              <ion-option value="western region">Western Region</ion-option>
-              <ion-option value="brong ahafo">Brong Ahafo</ion-option>
-              <ion-option value="ashanti region">Ashanti Region</ion-option>
-              <ion-option value="volta region">Volta Region</ion-option>
-              <ion-option value="central region">Central Region</ion-option>
-            </ion-select>
-          </ion-item>
         <ion-item>
-            <ion-label floating>Country</ion-label>
-            <ion-select [(ngModel)]="formValues.country">
-              <ion-option value="Ghana">Ghana</ion-option>
-              <ion-option value="Nigeria">Nigeria</ion-option>
-            </ion-select>
+          <ion-label floating>State</ion-label>
+          <ion-select [(ngModel)]="formValues.state">
+            <ion-option value="greater accra">Greater Accra</ion-option>
+            <ion-option value="upper east">Upper East</ion-option>
+            <ion-option value="upper west">Upper West</ion-option>
+            <ion-option value="northern region">Northern Region</ion-option>
+            <ion-option value="eastern region">Eastern Region</ion-option>
+            <ion-option value="western region">Western Region</ion-option>
+            <ion-option value="brong ahafo">Brong Ahafo</ion-option>
+            <ion-option value="ashanti region">Ashanti Region</ion-option>
+            <ion-option value="volta region">Volta Region</ion-option>
+            <ion-option value="central region">Central Region</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Country</ion-label>
+          <ion-select [(ngModel)]="formValues.country">
+            <ion-option value="Ghana">Ghana</ion-option>
+            <ion-option value="Nigeria">Nigeria</ion-option>
+          </ion-select>
         </ion-item>
         <ion-item>
           <button ion-button round color="primary" (click)="takePicture()" full>
@@ -366,29 +352,37 @@
   <ion-row>
     <ion-col>
       <ion-list inset>
-          <ion-item>
-              <ion-label>FindMeId</ion-label>
-              <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required="" ></ion-input>
-            </ion-item>
         <ion-item>
-          <ion-input placeholder={{selectedName}} 
-                     name="officeName" 
-                     type="text" required 
-                     [(ngModel)]="formValues.officeName">
-                    </ion-input>
+          <ion-label>FindMeId</ion-label>
+          <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required=""></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Contact Number" 
-                     name="mobile" 
-                     type="text" required 
-                     [(ngModel)]="formValues.mobile">
-                    </ion-input>
+          <ion-input placeholder={{selectedName}} name="officeName" type="text" required [(ngModel)]="formValues.officeName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="First Name" name="firstName" type="text" required [(ngModel)]="formValues.firstName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Middle Name</ion-label>
+          <ion-input name="middleName" type="text" required [(ngModel)]="formValues.middleName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Last Name</ion-label>
+          <ion-input name="lastName" type="text" required [(ngModel)]="formValues.lastName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Contact Number" name="mobile" type="text" required [(ngModel)]="formValues.mobile">
+          </ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Date of Birth: YYYY-MM-DD </ion-label>
           <ion-input type="tel" name="dateOfBirth" displayFormat="YYYY/MM/DD                              " [(ngModel)]="formValues.dateOfBirth"></ion-input>
         </ion-item>
-  
+
         <ion-item>
           <ion-label>Id Type</ion-label>
           <ion-select [(ngModel)]="formValues.idType">
@@ -398,13 +392,10 @@
             <ion-option value="national">National ID</ion-option>
           </ion-select>
         </ion-item>
-         <ion-item>
+        <ion-item>
           <ion-label floating>Enter Selected ID number</ion-label>
-          <ion-input 
-                     name="idNo" 
-                     type="text" required 
-                     [(ngModel)]="formValues.idNo">
-                    </ion-input>
+          <ion-input name="idNo" type="text" required [(ngModel)]="formValues.idNo">
+          </ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Gender</ion-label>
@@ -415,35 +406,23 @@
         </ion-item>
         <ion-item>
           <ion-label>Farm Size</ion-label>
-          <ion-input placeholder="ftsq or acres" 
-            name="landSize" 
-            type="text" required 
-            [(ngModel)]="formValues.landSize">
+          <ion-input placeholder="ftsq or acres" name="landSize" type="text" required [(ngModel)]="formValues.landSize">
           </ion-input>
         </ion-item>
         <ion-item>
-          <ion-textarea placeholder="Crops/Products" 
-                     name="otherInfo" 
-                     type="text" 
-                     [(ngModel)]="formValues.otherInfo">
+          <ion-textarea placeholder="Crops/Products" name="otherInfo" type="text" [(ngModel)]="formValues.otherInfo">
           </ion-textarea>
         </ion-item>
         <ion-item>
           <ion-label floating>Street</ion-label>
-          <ion-input 
-                     name="location" 
-                     type="text" required 
-                     [(ngModel)]="formValues.location">
-                    </ion-input>
+          <ion-input name="location" type="text" required [(ngModel)]="formValues.location">
+          </ion-input>
         </ion-item>
         <ion-item>
-            <ion-label floating>City</ion-label>
-            <ion-input 
-                       name="city" 
-                       type="text" required 
-                       [(ngModel)]="formValues.city">
-                      </ion-input>
-          </ion-item>
+          <ion-label floating>City</ion-label>
+          <ion-input name="city" type="text" required [(ngModel)]="formValues.city">
+          </ion-input>
+        </ion-item>
 
         <ion-item>
           <ion-label floating>State</ion-label>
@@ -461,11 +440,11 @@
           </ion-select>
         </ion-item>
         <ion-item>
-            <ion-label floating>Country</ion-label>
-            <ion-select [(ngModel)]="formValues.country">
-              <ion-option value="Ghana">Ghana</ion-option>
-              <ion-option value="Nigeria">Nigeria</ion-option>
-            </ion-select>
+          <ion-label floating>Country</ion-label>
+          <ion-select [(ngModel)]="formValues.country">
+            <ion-option value="Ghana">Ghana</ion-option>
+            <ion-option value="Nigeria">Nigeria</ion-option>
+          </ion-select>
         </ion-item>
         <ion-item>
           <button ion-button round color="primary" (click)="takePicture()" full>
@@ -487,33 +466,41 @@
 </ion-content>
 
 <ion-content padding *ngIf="schoolsForm">
-  <span *ngIf="currentLocation">{{ currentLocation }}</span>  
+  <span *ngIf="currentLocation">{{ currentLocation }}</span>
   <ion-row>
     <ion-col>
       <ion-list inset>
-          <ion-item>
-              <ion-label>FindMeId</ion-label>
-              <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required="" ></ion-input>
-            </ion-item>
         <ion-item>
-          <ion-input placeholder="School Name" 
-                     name="officeName" 
-                     type="text" required 
-                     [(ngModel)]="formValues.officeName">
-                    </ion-input>
+          <ion-label>FindMeId</ion-label>
+          <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required=""></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Owner" 
-                     name="otherNames" 
-                     type="text" required 
-                     [(ngModel)]="formValues.otherNames">
-                    </ion-input>
+          <ion-input placeholder="School Name" name="officeName" type="text" required [(ngModel)]="formValues.officeName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Owner" name="otherNames" type="text" required [(ngModel)]="formValues.otherNames">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="First Name" name="firstName" type="text" required [(ngModel)]="formValues.firstName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Middle Name</ion-label>
+          <ion-input name="middleName" type="text" required [(ngModel)]="formValues.middleName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Last Name</ion-label>
+          <ion-input name="lastName" type="text" required [(ngModel)]="formValues.lastName">
+          </ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Date of Birth: YYYY-MM-DD </ion-label>
           <ion-input type="tel" name="dateOfBirth" displayFormat="YYYY/MM/DD                              " [(ngModel)]="formValues.dateOfBirth"></ion-input>
         </ion-item>
-  
+
         <ion-item>
           <ion-label>Id Type</ion-label>
           <ion-select [(ngModel)]="formValues.idType">
@@ -523,74 +510,56 @@
             <ion-option value="national">National ID</ion-option>
           </ion-select>
         </ion-item>
-         <ion-item>
+        <ion-item>
           <ion-label floating>Enter Selected ID number</ion-label>
-          <ion-input 
-                     name="idNo" 
-                     type="text" required 
-                     [(ngModel)]="formValues.idNo">
-                    </ion-input>
+          <ion-input name="idNo" type="text" required [(ngModel)]="formValues.idNo">
+          </ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Contact Number" 
-                     name="mobile" 
-                     type="text" required 
-                     [(ngModel)]="formValues.mobile">
-                    </ion-input>
+          <ion-input placeholder="Contact Number" name="mobile" type="text" required [(ngModel)]="formValues.mobile">
+          </ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Email Address" 
-                     name="email" 
-                     type="email" 
-                     [(ngModel)]="formValues.email">
-                    </ion-input>
+          <ion-input placeholder="Email Address" name="email" type="email" [(ngModel)]="formValues.email">
+          </ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Website Address" 
-                      name="websiteUrl" 
-                      type="text" 
-                      [(ngModel)]="formValues.websiteUrl">
-                    </ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label floating>Street</ion-label>
-        <ion-input 
-                   name="location" 
-                   type="text" required 
-                   [(ngModel)]="formValues.location">
-                  </ion-input>
-      </ion-item>
-      <ion-item>
+          <ion-input placeholder="Website Address" name="websiteUrl" type="text" [(ngModel)]="formValues.websiteUrl">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Street</ion-label>
+          <ion-input name="location" type="text" required [(ngModel)]="formValues.location">
+          </ion-input>
+        </ion-item>
+        <ion-item>
           <ion-label floating>City</ion-label>
-          <ion-input
-                     name="city" 
-                     type="text" required 
-                     [(ngModel)]="formValues.city">
-                    </ion-input>
+          <ion-input name="city" type="text" required [(ngModel)]="formValues.city">
+          </ion-input>
         </ion-item>
 
-      <ion-item>
-        <ion-label floating>State</ion-label>
-        <ion-select [(ngModel)]="formValues.state">
-          <ion-option value="Greater Accra">Greater Accra</ion-option>
-          <ion-option value="Upper East">Upper East</ion-option>
-          <ion-option value="Upper West">Upper West</ion-option>
-          <ion-option value="Northern">Northern Region</ion-option>
-          <ion-option value="Eastern">Eastern Region</ion-option>
-          <ion-option value="Western">Western Region</ion-option>
-          <ion-option value="Brong Ahafo">Brong Ahafo</ion-option>
-          <ion-option value="Ashanti">Ashanti Region</ion-option>
-          <ion-option value="Volta">Volta Region</ion-option>
-          <ion-option value="Central">Central Region</ion-option>
-        </ion-select>
-      </ion-item>
-      <ion-item>
+        <ion-item>
+          <ion-label floating>State</ion-label>
+          <ion-select [(ngModel)]="formValues.state">
+            <ion-option value="Greater Accra">Greater Accra</ion-option>
+            <ion-option value="Upper East">Upper East</ion-option>
+            <ion-option value="Upper West">Upper West</ion-option>
+            <ion-option value="Northern">Northern Region</ion-option>
+            <ion-option value="Eastern">Eastern Region</ion-option>
+            <ion-option value="Western">Western Region</ion-option>
+            <ion-option value="Brong Ahafo">Brong Ahafo</ion-option>
+            <ion-option value="Ashanti">Ashanti Region</ion-option>
+            <ion-option value="Volta">Volta Region</ion-option>
+            <ion-option value="Central">Central Region</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
           <ion-label floating>Country</ion-label>
           <ion-select [(ngModel)]="formValues.country">
             <ion-option value="Ghana">Ghana</ion-option>
             <ion-option value="Nigeria">Nigeria</ion-option>
           </ion-select>
-      </ion-item>
+        </ion-item>
         <ion-item>
           <button ion-button round color="primary" (click)="takePicture()" full>
             <ion-icon name="md-camera"></ion-icon>
@@ -610,34 +579,42 @@
 </ion-content>
 
 <ion-content padding *ngIf="merchanicsForm">
-    <span *ngIf="currentLocation">{{ currentLocation }}</span>  
+  <span *ngIf="currentLocation">{{ currentLocation }}</span>
 
   <ion-row>
     <ion-col>
       <ion-list inset>
-          <ion-item>
-              <ion-label>FindMeId</ion-label>
-              <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required="" ></ion-input>
-            </ion-item>
         <ion-item>
-          <ion-input placeholder="Shop Name" 
-                     name="officeName" 
-                     type="text" required 
-                     [(ngModel)]="formValues.officeName">
-                    </ion-input>
+          <ion-label>FindMeId</ion-label>
+          <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required=""></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Owner" 
-                     name="otherNames" 
-                     type="text" required 
-                     [(ngModel)]="formValues.otherNames">
-                    </ion-input>
+          <ion-input placeholder="Shop Name" name="officeName" type="text" required [(ngModel)]="formValues.officeName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Owner" name="otherNames" type="text" required [(ngModel)]="formValues.otherNames">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="First Name" name="firstName" type="text" required [(ngModel)]="formValues.firstName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Middle Name</ion-label>
+          <ion-input name="middleName" type="text" required [(ngModel)]="formValues.middleName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Last Name</ion-label>
+          <ion-input name="lastName" type="text" required [(ngModel)]="formValues.lastName">
+          </ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Date of Birth: YYYY-MM-DD </ion-label>
           <ion-input type="tel" name="dateOfBirth" displayFormat="YYYY/MM/DD                              " [(ngModel)]="formValues.dateOfBirth"></ion-input>
         </ion-item>
-  
+
         <ion-item>
           <ion-label>Id Type</ion-label>
           <ion-select [(ngModel)]="formValues.idType">
@@ -647,20 +624,14 @@
             <ion-option value="national">National ID</ion-option>
           </ion-select>
         </ion-item>
-         <ion-item>
+        <ion-item>
           <ion-label floating>Enter Selected ID no.</ion-label>
-          <ion-input 
-                     name="idNo" 
-                     type="text" required 
-                     [(ngModel)]="formValues.idNo">
-                    </ion-input>
+          <ion-input name="idNo" type="text" required [(ngModel)]="formValues.idNo">
+          </ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Contact Number" 
-                     name="mobile" 
-                     type="text" required 
-                     [(ngModel)]="formValues.mobile">
-                    </ion-input>
+          <ion-input placeholder="Contact Number" name="mobile" type="text" required [(ngModel)]="formValues.mobile">
+          </ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Gender</ion-label>
@@ -669,23 +640,17 @@
             <ion-option value="male">Male</ion-option>
           </ion-select>
         </ion-item>
-  
+
         <ion-item>
           <ion-label floating>Street</ion-label>
-          <ion-input 
-                     name="location" 
-                     type="text" required 
-                     [(ngModel)]="formValues.location">
-                    </ion-input>
+          <ion-input name="location" type="text" required [(ngModel)]="formValues.location">
+          </ion-input>
         </ion-item>
         <ion-item>
-            <ion-label floating>City</ion-label>
-            <ion-input 
-                       name="city" 
-                       type="text" required 
-                       [(ngModel)]="formValues.city">
-                      </ion-input>
-          </ion-item>
+          <ion-label floating>City</ion-label>
+          <ion-input name="city" type="text" required [(ngModel)]="formValues.city">
+          </ion-input>
+        </ion-item>
 
         <ion-item>
           <ion-label floating>State</ion-label>
@@ -703,11 +668,11 @@
           </ion-select>
         </ion-item>
         <ion-item>
-            <ion-label floating>Country</ion-label>
-            <ion-select [(ngModel)]="formValues.country">
-              <ion-option value="Ghana">Ghana</ion-option>
-              <ion-option value="Nigeria">Nigeria</ion-option>
-            </ion-select>
+          <ion-label floating>Country</ion-label>
+          <ion-select [(ngModel)]="formValues.country">
+            <ion-option value="Ghana">Ghana</ion-option>
+            <ion-option value="Nigeria">Nigeria</ion-option>
+          </ion-select>
         </ion-item>
         <ion-item>
           <button ion-button round color="primary" (click)="takePicture()" full>
@@ -728,27 +693,38 @@
 </ion-content>
 
 <ion-content padding *ngIf="shopsForm">
-    <span *ngIf="currentLocation">{{ currentLocation }}</span>  
+  <span *ngIf="currentLocation">{{ currentLocation }}</span>
 
   <ion-row>
     <ion-col>
       <ion-list inset>
         <ion-item>
           <ion-label>FindMeId</ion-label>
-          <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required="" ></ion-input>
+          <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required=""></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Trader Name"
-                     name="otherNames" 
-                     type="text" required 
-                     [(ngModel)]="formValues.otherNames">
-                    </ion-input>
+          <ion-input placeholder="Trader Name" name="otherNames" type="text" required [(ngModel)]="formValues.otherNames">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="First Name" name="firstName" type="text" required [(ngModel)]="formValues.firstName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Middle Name</ion-label>
+          <ion-input name="middleName" type="text" required [(ngModel)]="formValues.middleName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Last Name</ion-label>
+          <ion-input name="lastName" type="text" required [(ngModel)]="formValues.lastName">
+          </ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Date of Birth: YYYY-MM-DD </ion-label>
           <ion-input type="tel" name="dateOfBirth" displayFormat="YYYY/MM/DD                              " [(ngModel)]="formValues.dateOfBirth"></ion-input>
         </ion-item>
-  
+
         <ion-item>
           <ion-label>Id Type</ion-label>
           <ion-select [(ngModel)]="formValues.idType">
@@ -758,51 +734,33 @@
             <ion-option value="national">National ID</ion-option>
           </ion-select>
         </ion-item>
-         <ion-item>
+        <ion-item>
           <ion-label floating>Enter Selected ID</ion-label>
-          <ion-input 
-                     name="idNo" 
-                     type="text" required 
-                     [(ngModel)]="formValues.idNo">
-                    </ion-input>
+          <ion-input name="idNo" type="text" required [(ngModel)]="formValues.idNo">
+          </ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Contact Number" 
-                     name="mobile" 
-                     type="text" required 
-                     [(ngModel)]="formValues.mobile">
-                    </ion-input>
+          <ion-input placeholder="Contact Number" name="mobile" type="text" required [(ngModel)]="formValues.mobile">
+          </ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Email Address" 
-                     name="email" 
-                     type="email" 
-                     [(ngModel)]="formValues.email">
-                    </ion-input>
+          <ion-input placeholder="Email Address" name="email" type="email" [(ngModel)]="formValues.email">
+          </ion-input>
         </ion-item>
         <ion-item>
-          <ion-textarea placeholder="Items" 
-                     name="otherInfo" 
-                     type="text" 
-                     [(ngModel)]="formValues.otherInfo">
+          <ion-textarea placeholder="Items" name="otherInfo" type="text" [(ngModel)]="formValues.otherInfo">
           </ion-textarea>
         </ion-item>
         <ion-item>
           <ion-label floating>Street</ion-label>
-          <ion-input 
-                     name="location" 
-                     type="text" required 
-                     [(ngModel)]="formValues.location">
-                    </ion-input>
+          <ion-input name="location" type="text" required [(ngModel)]="formValues.location">
+          </ion-input>
         </ion-item>
         <ion-item>
-            <ion-label floating>City</ion-label>
-            <ion-input
-                       name="city" 
-                       type="text" required 
-                       [(ngModel)]="formValues.city">
-                      </ion-input>
-          </ion-item>
+          <ion-label floating>City</ion-label>
+          <ion-input name="city" type="text" required [(ngModel)]="formValues.city">
+          </ion-input>
+        </ion-item>
 
         <ion-item>
           <ion-label floating>State</ion-label>
@@ -820,11 +778,11 @@
           </ion-select>
         </ion-item>
         <ion-item>
-            <ion-label floating>Country</ion-label>
-            <ion-select [(ngModel)]="formValues.country">
-              <ion-option value="Ghana">Ghana</ion-option>
-              <ion-option value="Nigeria">Nigeria</ion-option>
-            </ion-select>
+          <ion-label floating>Country</ion-label>
+          <ion-select [(ngModel)]="formValues.country">
+            <ion-option value="Ghana">Ghana</ion-option>
+            <ion-option value="Nigeria">Nigeria</ion-option>
+          </ion-select>
         </ion-item>
         <ion-item>
           <button ion-button round color="primary" (click)="takePicture()" full>
@@ -846,33 +804,41 @@
 </ion-content>
 
 <ion-content padding *ngIf="servicesForm">
-    <span *ngIf="currentLocation">{{ currentLocation }}</span>  
+  <span *ngIf="currentLocation">{{ currentLocation }}</span>
   <ion-row>
     <ion-col>
       <ion-list inset>
-          <ion-item>
-              <ion-label>FindMeId</ion-label>
-              <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required="" ></ion-input>
-            </ion-item>
         <ion-item>
-          <ion-input placeholder={{selectedName}} 
-                      name="officeName" 
-                      type="text" required 
-                      [(ngModel)]="formValues.officeName">
-                    </ion-input>
+          <ion-label>FindMeId</ion-label>
+          <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required=""></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Owner" 
-                      name="otherNames" 
-                      type="text" required 
-                      [(ngModel)]="formValues.otherNames">
-                    </ion-input>
+          <ion-input placeholder={{selectedName}} name="officeName" type="text" required [(ngModel)]="formValues.officeName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Owner" name="otherNames" type="text" required [(ngModel)]="formValues.otherNames">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="First Name" name="firstName" type="text" required [(ngModel)]="formValues.firstName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Middle Name</ion-label>
+          <ion-input name="middleName" type="text" required [(ngModel)]="formValues.middleName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Last Name</ion-label>
+          <ion-input name="lastName" type="text" required [(ngModel)]="formValues.lastName">
+          </ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Date of Birth: YYYY-MM-DD </ion-label>
           <ion-input type="tel" name="dateOfBirth" displayFormat="YYYY/MM/DD                              " [(ngModel)]="formValues.dateOfBirth"></ion-input>
         </ion-item>
-  
+
         <ion-item>
           <ion-label>Id Type</ion-label>
           <ion-select [(ngModel)]="formValues.idType">
@@ -882,73 +848,55 @@
             <ion-option value="national">National ID</ion-option>
           </ion-select>
         </ion-item>
-         <ion-item>
+        <ion-item>
           <ion-label floating>Enter Selected ID</ion-label>
-          <ion-input 
-                     name="idNo" 
-                     type="text" required 
-                     [(ngModel)]="formValues.idNo">
-                    </ion-input>
+          <ion-input name="idNo" type="text" required [(ngModel)]="formValues.idNo">
+          </ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Contact Number" 
-                      name="mobile" 
-                      type="text" required 
-                      [(ngModel)]="formValues.mobile">
-                    </ion-input>
+          <ion-input placeholder="Contact Number" name="mobile" type="text" required [(ngModel)]="formValues.mobile">
+          </ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Email Address" 
-                      name="email" 
-                      type="email" 
-                      [(ngModel)]="formValues.email">
-                    </ion-input>
+          <ion-input placeholder="Email Address" name="email" type="email" [(ngModel)]="formValues.email">
+          </ion-input>
         </ion-item>
         <ion-item>
-            <ion-input placeholder="Website Address" 
-                        name="websiteUrl" 
-                        type="text" 
-                        [(ngModel)]="formValues.websiteUrl">
-                      </ion-input>
+          <ion-input placeholder="Website Address" name="websiteUrl" type="text" [(ngModel)]="formValues.websiteUrl">
+          </ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Street</ion-label>
-          <ion-input 
-                     name="street" 
-                     type="text" required 
-                     [(ngModel)]="formValues.location">
-                    </ion-input>
+          <ion-input name="street" type="text" required [(ngModel)]="formValues.location">
+          </ion-input>
         </ion-item>
         <ion-item>
-            <ion-label floating>City</ion-label>
-            <ion-input 
-                       name="city" 
-                       type="text" required 
-                       [(ngModel)]="formValues.city">
-                      </ion-input>
-          </ion-item>
+          <ion-label floating>City</ion-label>
+          <ion-input name="city" type="text" required [(ngModel)]="formValues.city">
+          </ion-input>
+        </ion-item>
 
-          <ion-item>
-            <ion-label floating>State</ion-label>
-            <ion-select [(ngModel)]="formValues.state">
-              <ion-option value="greater accra">Greater Accra</ion-option>
-              <ion-option value="upper east">Upper East</ion-option>
-              <ion-option value="upper west">Upper West</ion-option>
-              <ion-option value="northern region">Northern Region</ion-option>
-              <ion-option value="eastern region">Eastern Region</ion-option>
-              <ion-option value="western region">Western Region</ion-option>
-              <ion-option value="brong ahafo">Brong Ahafo</ion-option>
-              <ion-option value="ashanti region">Ashanti Region</ion-option>
-              <ion-option value="volta region">Volta Region</ion-option>
-              <ion-option value="central region">Central Region</ion-option>
-            </ion-select>
-          </ion-item>
         <ion-item>
-            <ion-label floating>Country</ion-label>
-            <ion-select [(ngModel)]="formValues.country">
-              <ion-option value="Ghana">Ghana</ion-option>
-              <ion-option value="Nigeria">Nigeria</ion-option>
-            </ion-select>
+          <ion-label floating>State</ion-label>
+          <ion-select [(ngModel)]="formValues.state">
+            <ion-option value="greater accra">Greater Accra</ion-option>
+            <ion-option value="upper east">Upper East</ion-option>
+            <ion-option value="upper west">Upper West</ion-option>
+            <ion-option value="northern region">Northern Region</ion-option>
+            <ion-option value="eastern region">Eastern Region</ion-option>
+            <ion-option value="western region">Western Region</ion-option>
+            <ion-option value="brong ahafo">Brong Ahafo</ion-option>
+            <ion-option value="ashanti region">Ashanti Region</ion-option>
+            <ion-option value="volta region">Volta Region</ion-option>
+            <ion-option value="central region">Central Region</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Country</ion-label>
+          <ion-select [(ngModel)]="formValues.country">
+            <ion-option value="Ghana">Ghana</ion-option>
+            <ion-option value="Nigeria">Nigeria</ion-option>
+          </ion-select>
         </ion-item>
         <ion-item>
           <button ion-button round color="primary" (click)="takePicture()" full>
@@ -969,118 +917,108 @@
 </ion-content>
 
 <ion-content padding *ngIf="dealersForm">
-    <span *ngIf="currentLocation">{{ currentLocation }}</span>  
+  <span *ngIf="currentLocation">{{ currentLocation }}</span>
   <ion-row>
-      <ion-col>
-        <ion-list inset>
-            <ion-item>
-                <ion-label>FindMeId</ion-label>
-                <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required="" ></ion-input>
-              </ion-item>
-          <ion-item>
-            <ion-input placeholder="Transport Name" 
-                name="officeName" 
-                type="text" required 
-                [(ngModel)]="formValues.officeName">
-              </ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input placeholder="Owner" 
-                        name="otherNames" 
-                        type="text" required 
-                        [(ngModel)]="formValues.otherNames">
-                      </ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label floating>Date of Birth: YYYY-MM-DD </ion-label>
-            <ion-input type="tel" name="dateOfBirth" displayFormat="YYYY/MM/DD                              " [(ngModel)]="formValues.dateOfBirth"></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label>Id Type</ion-label>
-            <ion-select [(ngModel)]="formValues.idType">
-              <ion-option value="voter">Voter's ID</ion-option>
-              <ion-option value="NHIS">NHIS ID</ion-option>
-              <ion-option value="passport">Passport ID</ion-option>
-              <ion-option value="national">National ID</ion-option>
-            </ion-select>
-          </ion-item>
-           <ion-item>
-            <ion-label floating>Enter Selected ID</ion-label>
-            <ion-input 
-                       name="idNo" 
-                       type="text" required 
-                       [(ngModel)]="formValues.idNo">
-                      </ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input placeholder="Contact Number" 
-                        name="mobile" 
-                        type="text" required 
-                        [(ngModel)]="formValues.mobile">
-                      </ion-input>
-          </ion-item>
-  
-          <ion-item>
-            <ion-input placeholder="Email Address" 
-                        name="email" 
-                        type="email" 
-                        [(ngModel)]="formValues.email">
-                      </ion-input>
-          </ion-item>
-          <ion-item>
-              <ion-input placeholder="Website Address" 
-                          name="websiteUrl" 
-                          type="text" 
-                          [(ngModel)]="formValues.websiteUrl">
-                        </ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-label floating>Street</ion-label>
-            <ion-input 
-                       name="street" 
-                       type="text" required 
-                       [(ngModel)]="formValues.location">
-                      </ion-input>
-          </ion-item>
-          <ion-item>
-              <ion-label floating>City</ion-label>
-              <ion-input 
-                         name="city" 
-                         type="text" required 
-                         [(ngModel)]="formValues.city">
-                        </ion-input>
-            </ion-item>
-  
-          <ion-item>
-            <ion-label floating>State</ion-label>
-            <ion-select [(ngModel)]="formValues.state">
-              <ion-option value="Greater Accra">Greater Accra</ion-option>
-              <ion-option value="Upper East">Upper East</ion-option>
-              <ion-option value="Upper West">Upper West</ion-option>
-              <ion-option value="Northern">Northern Region</ion-option>
-              <ion-option value="Eastern">Eastern Region</ion-option>
-              <ion-option value="Western">Western Region</ion-option>
-              <ion-option value="Brong Ahafo">Brong Ahafo</ion-option>
-              <ion-option value="Ashanti">Ashanti Region</ion-option>
-              <ion-option value="Volta">Volta Region</ion-option>
-              <ion-option value="Central">Central Region</ion-option>
-            </ion-select>
-          </ion-item>
-          <ion-item>
-              <ion-label floating>Country</ion-label>
-              <ion-select [(ngModel)]="formValues.country">
-                <ion-option value="Ghana">Ghana</ion-option>
-                <ion-option value="Nigeria">Nigeria</ion-option>
-              </ion-select>
-          </ion-item>
-          <ion-item>
-            <button ion-button round color="primary" (click)="takePicture()" full>
-              <ion-icon name="md-camera"></ion-icon>
-            </button>
-          </ion-item>
-        </ion-list>
-      </ion-col>
-    </ion-row>
+    <ion-col>
+      <ion-list inset>
+        <ion-item>
+          <ion-label>FindMeId</ion-label>
+          <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required=""></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Transport Name" name="officeName" type="text" required [(ngModel)]="formValues.officeName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Owner" name="otherNames" type="text" required [(ngModel)]="formValues.otherNames">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="First Name" name="firstName" type="text" required [(ngModel)]="formValues.firstName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Middle Name</ion-label>
+          <ion-input name="middleName" type="text" required [(ngModel)]="formValues.middleName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Last Name</ion-label>
+          <ion-input name="lastName" type="text" required [(ngModel)]="formValues.lastName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Date of Birth: YYYY-MM-DD </ion-label>
+          <ion-input type="tel" name="dateOfBirth" displayFormat="YYYY/MM/DD                              " [(ngModel)]="formValues.dateOfBirth"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Id Type</ion-label>
+          <ion-select [(ngModel)]="formValues.idType">
+            <ion-option value="voter">Voter's ID</ion-option>
+            <ion-option value="NHIS">NHIS ID</ion-option>
+            <ion-option value="passport">Passport ID</ion-option>
+            <ion-option value="national">National ID</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Enter Selected ID</ion-label>
+          <ion-input name="idNo" type="text" required [(ngModel)]="formValues.idNo">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Contact Number" name="mobile" type="text" required [(ngModel)]="formValues.mobile">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input placeholder="Email Address" name="email" type="email" [(ngModel)]="formValues.email">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input placeholder="Website Address" name="websiteUrl" type="text" [(ngModel)]="formValues.websiteUrl">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Street</ion-label>
+          <ion-input name="street" type="text" required [(ngModel)]="formValues.location">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>City</ion-label>
+          <ion-input name="city" type="text" required [(ngModel)]="formValues.city">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>State</ion-label>
+          <ion-select [(ngModel)]="formValues.state">
+            <ion-option value="Greater Accra">Greater Accra</ion-option>
+            <ion-option value="Upper East">Upper East</ion-option>
+            <ion-option value="Upper West">Upper West</ion-option>
+            <ion-option value="Northern">Northern Region</ion-option>
+            <ion-option value="Eastern">Eastern Region</ion-option>
+            <ion-option value="Western">Western Region</ion-option>
+            <ion-option value="Brong Ahafo">Brong Ahafo</ion-option>
+            <ion-option value="Ashanti">Ashanti Region</ion-option>
+            <ion-option value="Volta">Volta Region</ion-option>
+            <ion-option value="Central">Central Region</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Country</ion-label>
+          <ion-select [(ngModel)]="formValues.country">
+            <ion-option value="Ghana">Ghana</ion-option>
+            <ion-option value="Nigeria">Nigeria</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <button ion-button round color="primary" (click)="takePicture()" full>
+            <ion-icon name="md-camera"></ion-icon>
+          </button>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
 
 
   <ion-row>
@@ -1094,28 +1032,36 @@
 
 <ion-content padding *ngIf="momoForm">
   <!-- <h2>Add Merchant</h2> -->
-  <span *ngIf="currentLocation" >{{ currentLocation }}</span>  
+  <span *ngIf="currentLocation">{{ currentLocation }}</span>
   <ion-item>
-      <ion-label>FindMeId</ion-label>
-      <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required="" ></ion-input>
-    </ion-item>
-  <ion-item>
-    <ion-input type="text" 
-                placeholder={{selectedName}} 
-                name="officeName"  
-                [(ngModel)]="formValues.officeName" >
-            </ion-input>
+    <ion-label>FindMeId</ion-label>
+    <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required=""></ion-input>
   </ion-item>
   <ion-item>
-    <ion-input type="text" 
-                placeholder="Shop owner" 
-                name="otherNames"  
-                [(ngModel)]="formValues.otherNames" >
-            </ion-input>
+    <ion-input type="text" placeholder={{selectedName}} name="officeName" [(ngModel)]="formValues.officeName">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" placeholder="Shop owner" name="otherNames" [(ngModel)]="formValues.otherNames">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder="First Name" name="firstName" type="text" required [(ngModel)]="formValues.firstName">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Middle Name</ion-label>
+    <ion-input name="middleName" type="text" required [(ngModel)]="formValues.middleName">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Last Name</ion-label>
+    <ion-input name="lastName" type="text" required [(ngModel)]="formValues.lastName">
+    </ion-input>
   </ion-item>
   <ion-item>
     <ion-label floating>Date of Birth: YYYY-MM-DD </ion-label>
-    <ion-input type="tel" name="dateOfBirth" displayFormat="YYYY/MM/DD                              " [(ngModel)]="formValues.dateOfBirth"></ion-input>
+    <ion-input type="tel" name="dateOfBirth" displayFormat="YYYY/MM/DD" [(ngModel)]="formValues.dateOfBirth"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label>Id Type</ion-label>
@@ -1126,20 +1072,14 @@
       <ion-option value="national">National ID</ion-option>
     </ion-select>
   </ion-item>
-   <ion-item>
+  <ion-item>
     <ion-label floating>Enter Selected ID</ion-label>
-    <ion-input 
-               name="idNo" 
-               type="text" required 
-               [(ngModel)]="formValues.idNo">
-              </ion-input>
+    <ion-input name="idNo" type="text" required [(ngModel)]="formValues.idNo">
+    </ion-input>
   </ion-item>
   <ion-item>
-    <ion-input type="text" 
-                placeholder="Contact Number" 
-                name="mobile"  
-                [(ngModel)]="formValues.mobile" >
-            </ion-input>
+    <ion-input type="text" placeholder="Contact Number" name="mobile" [(ngModel)]="formValues.mobile">
+    </ion-input>
   </ion-item>
   <ion-item>
     <ion-label>Gender</ion-label>
@@ -1149,51 +1089,42 @@
     </ion-select>
   </ion-item>
   <ion-item>
-      <ion-input type="email" 
-                placeholder="Email" 
-                name="email"  
-                [(ngModel)]="formValues.email" >
-            </ion-input>
+    <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="formValues.email">
+    </ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label floating>Street</ion-label>
-    <ion-input 
-               name="street" 
-               type="text" required 
-               [(ngModel)]="formValues.location">
-              </ion-input>
+    <ion-input name="street" type="text" required [(ngModel)]="formValues.location">
+    </ion-input>
   </ion-item>
   <ion-item>
-      <ion-label floating>City</ion-label>
-      <ion-input 
-                 name="city" 
-                 type="text" required 
-                 [(ngModel)]="formValues.city">
-                </ion-input>
-    </ion-item>
+    <ion-label floating>City</ion-label>
+    <ion-input name="city" type="text" required [(ngModel)]="formValues.city">
+    </ion-input>
+  </ion-item>
 
-    <ion-item>
-      <ion-label floating>State</ion-label>
-      <ion-select [(ngModel)]="formValues.state">
-        <ion-option value="greater accra">Greater Accra</ion-option>
-        <ion-option value="upper east">Upper East</ion-option>
-        <ion-option value="upper west">Upper West</ion-option>
-        <ion-option value="northern region">Northern Region</ion-option>
-        <ion-option value="eastern region">Eastern Region</ion-option>
-        <ion-option value="western region">Western Region</ion-option>
-        <ion-option value="brong ahafo">Brong Ahafo</ion-option>
-        <ion-option value="ashanti region">Ashanti Region</ion-option>
-        <ion-option value="volta region">Volta Region</ion-option>
-        <ion-option value="central region">Central Region</ion-option>
-      </ion-select>
-    </ion-item>
   <ion-item>
-      <ion-label floating>Country</ion-label>
-      <ion-select [(ngModel)]="formValues.country">
-        <ion-option value="Ghana">Ghana</ion-option>
-        <ion-option value="Nigeria">Nigeria</ion-option>
-      </ion-select>
+    <ion-label floating>State</ion-label>
+    <ion-select [(ngModel)]="formValues.state">
+      <ion-option value="greater accra">Greater Accra</ion-option>
+      <ion-option value="upper east">Upper East</ion-option>
+      <ion-option value="upper west">Upper West</ion-option>
+      <ion-option value="northern region">Northern Region</ion-option>
+      <ion-option value="eastern region">Eastern Region</ion-option>
+      <ion-option value="western region">Western Region</ion-option>
+      <ion-option value="brong ahafo">Brong Ahafo</ion-option>
+      <ion-option value="ashanti region">Ashanti Region</ion-option>
+      <ion-option value="volta region">Volta Region</ion-option>
+      <ion-option value="central region">Central Region</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Country</ion-label>
+    <ion-select [(ngModel)]="formValues.country">
+      <ion-option value="Ghana">Ghana</ion-option>
+      <ion-option value="Nigeria">Nigeria</ion-option>
+    </ion-select>
   </ion-item>
   <ion-item>
     <button ion-button round color="primary" (click)="takePicture()" full>
@@ -1207,7 +1138,7 @@
       <button ion-button class="submit-btn" full (click)="addBusiness()">Submit {{selectedName}}</button>
     </ion-col>
   </ion-row>
-  
+
 </ion-content>
 
 <ion-content padding *ngIf="egalAgentForm">
@@ -1216,7 +1147,7 @@
       <ion-list inset>
         <ion-item>
           <ion-label>FindMeId</ion-label>
-          <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required="" ></ion-input>
+          <ion-input type="text" placeholder="findMeId" [(ngModel)]="formValues.findMeId" name="findMeId" required=""></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Position</ion-label>
@@ -1228,24 +1159,24 @@
           </ion-select>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="First Name" 
-            name="officeName" 
-            type="text" required 
-            [(ngModel)]="formValues.officeName">
+          <ion-input placeholder="First Name" name="firstName" type="text" required [(ngModel)]="formValues.firstName">
           </ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Other Names" 
-                     name="otherNames" 
-                     type="text" required 
-                     [(ngModel)]="formValues.otherNames">
-                    </ion-input>
+          <ion-label floating>Middle Name</ion-label>
+          <ion-input name="middleName" type="text" required [(ngModel)]="formValues.middleName">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Last Name</ion-label>
+          <ion-input name="lastName" type="text" required [(ngModel)]="formValues.lastName">
+          </ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Date of Birth: YYYY-MM-DD </ion-label>
           <ion-input type="tel" name="dateOfBirth" displayFormat="YYYY/MM/DD" [(ngModel)]="formValues.dateOfBirth"></ion-input>
         </ion-item>
-  
+
         <ion-item>
           <ion-label>Id Type</ion-label>
           <ion-select [(ngModel)]="formValues.idType">
@@ -1255,20 +1186,14 @@
             <ion-option value="national">National ID</ion-option>
           </ion-select>
         </ion-item>
-         <ion-item>
+        <ion-item>
           <ion-label floating>Enter Selected ID</ion-label>
-          <ion-input 
-                     name="idNo" 
-                     type="text" required 
-                     [(ngModel)]="formValues.idNo">
-                    </ion-input>
+          <ion-input name="idNo" type="text" required [(ngModel)]="formValues.idNo">
+          </ion-input>
         </ion-item>
         <ion-item>
-          <ion-input placeholder="Phone Number" 
-                     name="mobile" 
-                     type="text" required 
-                     [(ngModel)]="formValues.mobile">
-                    </ion-input>
+          <ion-input placeholder="Phone Number" name="mobile" type="text" required [(ngModel)]="formValues.mobile">
+          </ion-input>
         </ion-item>
         <ion-item>
           <ion-label>Gender</ion-label>
@@ -1278,51 +1203,42 @@
           </ion-select>
         </ion-item>
         <ion-item>
-            <ion-input type="email" 
-                      placeholder="Email"
-                      name="email"  
-                      [(ngModel)]="formValues.email" >
-                  </ion-input>
+          <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="formValues.email">
+          </ion-input>
         </ion-item>
         <ion-item>
-            <ion-label floating>Street</ion-label>
-            <ion-input 
-                       name="street" 
-                       type="text" required 
-                       [(ngModel)]="formValues.location">
-                      </ion-input>
-          </ion-item>
-          <ion-item>
-              <ion-label floating>City</ion-label>
-              <ion-input 
-                         name="city" 
-                         type="text" required 
-                         [(ngModel)]="formValues.city">
-                        </ion-input>
-            </ion-item>
-  
-            <ion-item>
-              <ion-label floating>State</ion-label>
-              <ion-select [(ngModel)]="formValues.state">
-                <ion-option value="greater accra">Greater Accra</ion-option>
-                <ion-option value="upper east">Upper East</ion-option>
-                <ion-option value="upper west">Upper West</ion-option>
-                <ion-option value="northern region">Northern Region</ion-option>
-                <ion-option value="eastern region">Eastern Region</ion-option>
-                <ion-option value="western region">Western Region</ion-option>
-                <ion-option value="brong ahafo">Brong Ahafo</ion-option>
-                <ion-option value="ashanti region">Ashanti Region</ion-option>
-                <ion-option value="volta region">Volta Region</ion-option>
-                <ion-option value="central region">Central Region</ion-option>
-              </ion-select>
-            </ion-item>
-          <ion-item>
-              <ion-label floating>Country</ion-label>
-              <ion-select [(ngModel)]="formValues.country">
-                <ion-option value="Ghana">Ghana</ion-option>
-                <ion-option value="Nigeria">Nigeria</ion-option>
-              </ion-select>
-          </ion-item>
+          <ion-label floating>Street</ion-label>
+          <ion-input name="street" type="text" required [(ngModel)]="formValues.location">
+          </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>City</ion-label>
+          <ion-input name="city" type="text" required [(ngModel)]="formValues.city">
+          </ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>State</ion-label>
+          <ion-select [(ngModel)]="formValues.state">
+            <ion-option value="greater accra">Greater Accra</ion-option>
+            <ion-option value="upper east">Upper East</ion-option>
+            <ion-option value="upper west">Upper West</ion-option>
+            <ion-option value="northern region">Northern Region</ion-option>
+            <ion-option value="eastern region">Eastern Region</ion-option>
+            <ion-option value="western region">Western Region</ion-option>
+            <ion-option value="brong ahafo">Brong Ahafo</ion-option>
+            <ion-option value="ashanti region">Ashanti Region</ion-option>
+            <ion-option value="volta region">Volta Region</ion-option>
+            <ion-option value="central region">Central Region</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Country</ion-label>
+          <ion-select [(ngModel)]="formValues.country">
+            <ion-option value="Ghana">Ghana</ion-option>
+            <ion-option value="Nigeria">Nigeria</ion-option>
+          </ion-select>
+        </ion-item>
         <ion-item>
           <button ion-button round color="primary" (click)="takePicture()" full>
             <ion-icon name="md-camera"></ion-icon>
@@ -1348,36 +1264,26 @@
       <ion-list inset>
         <ion-item>
           <!-- <ion-label floating>First Name</ion-label> -->
-          <ion-input placeholder="First Name"
-            name="firstName" 
-            type="text" required 
-            [(ngModel)]="formValues.firstName">
+          <ion-input placeholder="First Name" name="firstName" type="text" required [(ngModel)]="formValues.firstName">
           </ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Middle Name</ion-label>
-          <ion-input
-                     name="middleName" 
-                     type="text" required 
-                     [(ngModel)]="formValues.middleName">
-                    </ion-input>
+          <ion-input name="middleName" type="text" required [(ngModel)]="formValues.middleName">
+          </ion-input>
         </ion-item>
         <ion-item>
-            <ion-label floating>Last Name</ion-label>
-            <ion-input 
-                       name="lastName" 
-                       type="text" required 
-                       [(ngModel)]="formValues.lastName">
-                      </ion-input>
+          <ion-label floating>Last Name</ion-label>
+          <ion-input name="lastName" type="text" required [(ngModel)]="formValues.lastName">
+          </ion-input>
         </ion-item>
 
         <ion-item>
           <ion-label floating>Date of Birth: YYYY-MM-DD </ion-label>
-          <ion-input type="text" name="dateOfBirth"
-                     [(ngModel)]="formValues.dateOfBirth">
-                    </ion-input>
+          <ion-input type="text" name="dateOfBirth" [(ngModel)]="formValues.dateOfBirth">
+          </ion-input>
         </ion-item>
-        
+
         <ion-item>
           <ion-label floating>Id Type</ion-label>
           <ion-select [(ngModel)]="formValues.idType">/ion-input
@@ -1387,31 +1293,23 @@
             <ion-option value="national">National ID</ion-option>
           </ion-select>
         </ion-item>
-         <ion-item>
+        <ion-item>
           <ion-label floating>Enter Selected ID number</ion-label>
-          <ion-input 
-                     name="idNo" 
-                     type="text" required 
-                     [(ngModel)]="formValues.idNo">
-                    </ion-input>
+          <ion-input name="idNo" type="text" required [(ngModel)]="formValues.idNo">
+          </ion-input>
         </ion-item>
         <ion-item>
           <ion-label floating>Phone number</ion-label>
-          <ion-input 
-                     name="mobile" 
-                     type="text" required 
-                     [(ngModel)]="formValues.mobile">
-                    </ion-input>
+          <ion-input name="mobile" type="text" required [(ngModel)]="formValues.mobile">
+          </ion-input>
         </ion-item>
         <ion-item>
-            <ion-label floating>Email</ion-label>
-            <ion-input type="email" 
-                      name="email"  
-                      [(ngModel)]="formValues.email" >
-                  </ion-input>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="email" name="email" [(ngModel)]="formValues.email">
+          </ion-input>
         </ion-item>
         <ion-item>
-          <ion-label >Gender</ion-label>
+          <ion-label>Gender</ion-label>
           <ion-select [(ngModel)]="formValues.gender">
             <ion-option value="female">Female</ion-option>
             <ion-option value="male">Male</ion-option>
@@ -1419,20 +1317,14 @@
         </ion-item>
         <ion-item>
           <ion-label floating>Street</ion-label>
-          <ion-input 
-                     name="street" 
-                     type="text" required 
-                     [(ngModel)]="formValues.location">
-                    </ion-input>
+          <ion-input name="street" type="text" required [(ngModel)]="formValues.location">
+          </ion-input>
         </ion-item>
         <ion-item>
-            <ion-label floating>City</ion-label>
-            <ion-input 
-                       name="city" 
-                       type="text" required 
-                       [(ngModel)]="formValues.city">
-                      </ion-input>
-          </ion-item>
+          <ion-label floating>City</ion-label>
+          <ion-input name="city" type="text" required [(ngModel)]="formValues.city">
+          </ion-input>
+        </ion-item>
 
         <ion-item>
           <ion-label floating>State/Region</ion-label>
@@ -1458,9 +1350,9 @@
         </ion-item>
 
         <ion-item>
-          <button ion-button round color="primary" (click)="takeCardPicture()" full>
+          <!-- <button ion-button round color="primary" (click)="takeCardPicture()" full>
             <ion-icon name="card"></ion-icon> IdCard Picture
-          </button>
+          </button> -->
           <button ion-button round color="primary" (click)="takePicture()" full>
             <ion-icon name="camera"></ion-icon> Camera
           </button>
@@ -1478,4 +1370,3 @@
     </ion-col>
   </ion-row>
 </ion-content>
-

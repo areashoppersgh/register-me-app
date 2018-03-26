@@ -21,9 +21,9 @@ export class AuthProvider {
   result: any;
    
   //  baseUrl: string = "https://sikafone-pymvrkzhqa.now.sh"; //host nabiypy@hotmail.co.uk cape coast
-  baseUrl: any = 'http://app-a8f9bd8b-8769-4f5e-b771-34aa090657d0.cleverapps.io';
+  //baseUrl: any = 'http://app-a8f9bd8b-8769-4f5e-b771-34aa090657d0.cleverapps.io'; //live
   // baseUrl: any = 'https://sikafone-vlqfqnvtfv.now.sh';
-  // baseUrl: any = 'http://localhost:8080';
+  baseUrl: any = 'http://localhost:8080';
 
   public token: any;
   userId: string;

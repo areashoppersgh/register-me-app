@@ -14,11 +14,11 @@
 
 
 <ion-content padding>
-  <button ion-button (click)="reloadBusiness()">Refresh</button>
+  <!-- <button ion-button (click)="reloadBusiness()">Refresh</button> -->
+  <button ion-button (click)="reloadBusinessByUser(userId)">Refresh</button>
 
   <ion-list *ngFor="let bus of businessess; let i=index">
     <ion-item  *ngIf="(userId == bus.userId)">
-
       <ion-thumbnail item-start>
         <img src="{{bus.fileUpload}}">
       </ion-thumbnail>
@@ -30,4 +30,20 @@
       <button ion-button clear item-end (click)="deleteBusiness(bus)">X</button>
     </ion-item>
   </ion-list>
+
+  <!-- <ion-list *ngFor="let bus of businessess; let i=index">
+    <ion-item >
+
+      <ion-thumbnail item-start>
+        <img src="{{bus.fileUpload}}">
+      </ion-thumbnail>
+      <h2>{{bus.findMeId}}</h2>
+      <p>{{bus.mobile}}</p>
+      <p>{{bus.geolocation}}</p>
+      <p>{{bus.directory}}</p>
+      <button ion-button clear item-end (click)="editBusiness(bus)">Edit</button>
+      <button ion-button clear item-end (click)="deleteBusiness(bus)">X</button>
+    </ion-item>
+  </ion-list> -->
+
 </ion-content>

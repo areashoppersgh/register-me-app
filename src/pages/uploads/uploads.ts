@@ -99,19 +99,20 @@ export class UploadsPage {
       location: 'default'
     }).then((db: SQLiteObject) => {
       // db.executeSql('CREATE TABLE IF NOT EXISTS expense(rowid INTEGER PRIMARY KEY, date TEXT, type TEXT, description TEXT, amount INT)', {})
-      db.executeSql('CREATE TABLE IF NOT EXISTS tester(rowid INTEGER PRIMARY KEY, userId TEXT, findMeId TEXT,officeName TEXT, otherNames TEXT, mobile TEXT, directory TEXT, latitude TEXT, longitude TEXT, location TEXT, gender TEXT, fileUpload BLOB, otherInfo TEXT)', {})
-      .then(res => console.log('Executed SQL: ' + ' CREATE TABLE IF NOT EXISTS tester'))
+      db.executeSql('CREATE TABLE IF NOT EXISTS eco(rowid INTEGER PRIMARY KEY, userId TEXT, findMeId TEXT,officeName TEXT, firstName TEXT, middleName TEXT, lastName TEXT, otherNames TEXT, dateOfBirth DATE, idType TEXT, idNo TEXT, email TEXT, mobile TEXT, directory TEXT, latitude TEXT, longitude TEXT, location TEXT, gender TEXT, street TEXT, city TEXT, state TEXT, country TEXT, maritalStatus TEXT, homeTown TEXT, fileUpload BLOB, landSize TEXT, otherInfo TEXT)', {})
+      .then(res => console.log('Executed SQL: ' + ' CREATE TABLE IF NOT EXISTS eco'))
       .catch(e => console.log(JSON.stringify(e)));
-      db.executeSql('SELECT * FROM tester ORDER BY rowid DESC', {})
+      db.executeSql('SELECT * FROM eco ORDER BY rowid DESC', {})
       .then(res => {
-        console.log("SELECT * FROM tester ORDER BY rowid DESC resp >>>", JSON.stringify(res));
+        console.log("SELECT * FROM eco ORDER BY rowid DESC resp >>>", JSON.stringify(res));
         this.expenses = [];
         for(var i=0; i<res.rows.length; i++) {
-          this.expenses.push({rowid:res.rows.item(i).rowid,userId:res.rows.item(i).userId,findMeId:res.rows.item(i).findMeId,officeName:res.rows.item(i).officeName,otherNames:res.rows.item(i).otherNames,mobile:res.rows.item(i).mobile,directory:res.rows.item(i).directory,latitude:res.rows.item(i).latitude,longitude:res.rows.item(i).longitude,location:res.rows.item(i).location,gender:res.rows.item(i).gender,fileUpload:res.rows.item(i).fileUpload,otherInfo:res.rows.item(i).otherInfo})
+          // this.expenses.push({rowid:res.rows.item(i).rowid,userId:res.rows.item(i).userId,findMeId:res.rows.item(i).findMeId,officeName:res.rows.item(i).officeName,otherNames:res.rows.item(i).otherNames,mobile:res.rows.item(i).mobile,directory:res.rows.item(i).directory,latitude:res.rows.item(i).latitude,longitude:res.rows.item(i).longitude,location:res.rows.item(i).location,gender:res.rows.item(i).gender,fileUpload:res.rows.item(i).fileUpload,otherInfo:res.rows.item(i).otherInfo})
+          this.expenses.push({rowid:res.rows.item(i).rowid,userId:res.rows.item(i).userId,findMeId:res.rows.item(i).findMeId,officeName:res.rows.item(i).officeName,firstName:res.rows.item(i).firstName,middleName:res.rows.item(i).middleName,lastName:res.rows.item(i).lastName,dateOfBirth:res.rows.item(i).dateOfBirth,idType:res.rows.item(i).idType,idNo:res.rows.item(i).idNo,email:res.rows.item(i).email,otherNames:res.rows.item(i).otherNames,mobile:res.rows.item(i).mobile,directory:res.rows.item(i).directory,latitude:res.rows.item(i).latitude,longitude:res.rows.item(i).longitude,location:res.rows.item(i).location,gender:res.rows.item(i).gender,street:res.rows.item(i).street,city:res.rows.item(i).city,state:res.rows.item(i).state,country:res.rows.item(i).country,maritalStatus:res.rows.item(i).maritalStatus,homeTown:res.rows.item(i).homeTown,fileUpload:res.rows.item(i).fileUpload,landSize:res.rows.item(i).landSize,otherInfo:res.rows.item(i).otherInfo})
         }
       })
-      .catch(e => console.log('error select * from tester ',e));
-      db.executeSql('SELECT SUM(amount) AS totalIncome FROM tester WHERE type="Income"', {})
+      .catch(e => console.log('error select * from eco ',e));
+      db.executeSql('SELECT SUM(amount) AS totalIncome FROM eco WHERE type="Income"', {})
       .then(res => {
         if(res.rows.length>0) {
           this.totalIncome = parseInt(res.rows.item(0).totalIncome);
@@ -119,7 +120,7 @@ export class UploadsPage {
         }
       })
       .catch(e => console.log(e));
-      db.executeSql('SELECT SUM(amount) AS totalExpense FROM tester WHERE type="Expense"', {})
+      db.executeSql('SELECT SUM(amount) AS totalExpense FROM eco WHERE type="Expense"', {})
       .then(res => {
         if(res.rows.length>0) {
           this.totalExpense = parseInt(res.rows.item(0).totalExpense);
@@ -140,9 +141,9 @@ export class UploadsPage {
       name: 'ionicdb.db',
       location: 'default'
     }).then((db: SQLiteObject) => {
-      db.executeSql('DELETE FROM tester WHERE rowid=?', [rowid])
+      db.executeSql('DELETE FROM eco WHERE rowid=?', [rowid])
       .then(res => {
-        console.log("Delete from tester", JSON.stringify(res));
+        console.log("Delete from eco", JSON.stringify(res));
         this.getData();
       })
       .catch(e => console.log(e));
@@ -167,15 +168,15 @@ export class UploadsPage {
         console.log('error posting offline form data',JSON.stringify(err));
         // this.error = err;
         this.isLoading.dismiss();
-        this.presentToast("error posting offline form data"+"check your location serivce");
-        this.toast.show('Check Network Location service', '5000', 'center').subscribe(
+        this.presentToast("Provide Latitude and Longitude :: "+" Check your device location serivce");
+        this.toast.show('Please Turn your GPS on', '5000', 'center').subscribe(
           toast => {
             console.log(toast);
           }
         );
       });
     }else{
-      let msg = 'Oops, no user records, Login';
+      let msg = 'Oops, no User records, Sign out and restart the app';
       this.isLoading.dismiss();
       this.presentToast(msg);
       this.navCtrl.setRoot(LoginPage);

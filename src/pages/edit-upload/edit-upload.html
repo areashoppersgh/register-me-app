@@ -27,7 +27,6 @@
             <ion-item>
                 <ion-label floating>FindMeId</ion-label>
                 <ion-input type="text" 
-                 
                   [(ngModel)]="data.findMeId" 
                   name="findMeId" required="" >
                 </ion-input>
@@ -145,7 +144,7 @@
         
                 <ion-item>
                   <ion-label floating>State</ion-label>
-                  <ion-select [(ngModel)]="data.state">
+                  <ion-select [(ngModel)]="data.state" name="state">
                     <ion-option value="greater accra">Greater Accra</ion-option>
                     <ion-option value="upper east">Upper East</ion-option>
                     <ion-option value="upper west">Upper West</ion-option>

@@ -14,9 +14,9 @@ import { Business } from './../../models/business.model';
 export class RestProvider {
   //host nabiypy@hotmail.co.uk
   // baseUrl: string = "https://sikafone-pymvrkzhqa.now.sh";
-  baseUrl: any = 'http://app-a8f9bd8b-8769-4f5e-b771-34aa090657d0.cleverapps.io';
+  // baseUrl: any = 'http://app-a8f9bd8b-8769-4f5e-b771-34aa090657d0.cleverapps.io';//live
   // baseUrl: any = 'https://sikafone-vlqfqnvtfv.now.sh';
-  // baseUrl: any = 'http://localhost:8080';
+  baseUrl: any = 'http://localhost:8080';
 
   result: any;
   constructor(public http: HttpClient, public storage: Storage) {
@@ -97,7 +97,22 @@ export class RestProvider {
         });
     });
   }
-  
+  getBusinessByUser(post: Business) {
+    console.log('getBusinessByUser @service >>> ',JSON.stringify(post))
+    return new Promise((resolve, reject) => {
+      this.http.get(this.baseUrl + '/api/business/byuser/'+post,{
+        headers: new HttpHeaders({'Content-type':'application/json'})    
+      })
+        .map(res => this.result = res)
+        .subscribe(data => {
+          resolve(data);
+          console.log('getBusinessByUser response message : ', JSON.stringify(data));
+        }, (err) => {
+          reject(err);
+          console.log('getBusinessByUser error message : ', JSON.stringify(err));
+        });
+    });
+  }
   updateBusiness(post: Business) {
     console.log('@rest.ts update Business >>', JSON.stringify(post));
     console.log('@rest.ts post id >>>', post.id);

@@ -12,18 +12,7 @@
                 }
             ]
         },
-        { 
-            "name": "Ecobank",
-            "children": [
-                {
-                    "name": "Ecobank Xpress Account",
-                    "information": "Create and instance account with Ecobank",
-                    "price": "25",
-                    "group": "Ecobank",
-                    "icon": ""
-                }
-            ]
-        },
+       
         {
             "name": "Artisans",
             "children": [

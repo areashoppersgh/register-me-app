@@ -22,6 +22,7 @@ export class OfflinePage {
   allBusiness: any;
   isToast: any;
   public userId: any;
+  tUserBusUpload: any;
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
@@ -31,7 +32,6 @@ export class OfflinePage {
               private storage: Storage) {
                 // this.userId = userId;
                 // this.reloadBusiness();
-
   }
 
   ionViewDidLoad() {
@@ -40,15 +40,32 @@ export class OfflinePage {
       console.log('@offlinePage isLoggedIn >>>', userId);
       this.userId = userId;
       console.log('@offlinePage this.userId >>>', this.userId);
+      this.reloadBusinessByUser(this.userId);
+
     });
-    this.reloadBusiness();
+    // this.reloadBusiness();
   }
-  reloadBusiness(){
+  // reloadBusiness(){
+  //   this.showLoader();
+  //   this.restProvider.getBusinessess().then((data) => {
+  //     this.isLoading.dismiss().catch(() => {});;
+  //     this.businessess = data;
+  //     console.log('all businessess >>>', this.businessess);
+  //   }, (err) => {
+  //     console.log("@reloadBusiness an error occured ~",JSON.stringify(err));
+  //     this.isLoading.dismiss().catch(() => {});;
+  //   });
+  // }
+
+  reloadBusinessByUser(userId){
     this.showLoader();
-    this.restProvider.getBusinessess().then((data) => {
+    console.log('reloadBusinessByUer userId >>',this.userId);
+    this.restProvider.getBusinessByUser(this.userId).then((data) => {
       this.isLoading.dismiss().catch(() => {});;
       this.businessess = data;
-      console.log('all businessess >>>', this.businessess);
+      console.log('all businessess >>>', data);
+      console.log('tUserBusiness uploads >>>', this.businessess.length);
+      this.tUserBusUpload = this.businessess.length
     }, (err) => {
       console.log("@reloadBusiness an error occured ~",JSON.stringify(err));
       this.isLoading.dismiss().catch(() => {});;
@@ -68,7 +85,8 @@ export class OfflinePage {
       this.presentToast('Business successfully removed');
       this.isLoading.dismiss().catch(() => {});;
       this.navCtrl.pop();
-      this.reloadBusiness();
+      this.reloadBusinessByUser(this.userId);
+      // this.reloadBusiness();
     }, (err) => {
       console.log(err);
       // this.error = err;

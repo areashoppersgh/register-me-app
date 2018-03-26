@@ -8,9 +8,11 @@
   <h2>Register business</h2>
   <form >
       <ion-item>
-        <ion-label>Directory</ion-label>
+        <ion-label>Directories</ion-label>
         <ion-select [(ngModel)]="data.directory" name="directory" required="">
           <ion-option value="Sikafone">Sikafone Agent</ion-option>
+          <ion-option value="egal directories">Egal Agents</ion-option>
+          <ion-option value="Ecobank Xpress Account">Ecobank Xpress</ion-option>
           <ion-option value="Farmer">Farmer</ion-option>
           <ion-option value="Merchanic">Merchanic</ion-option>
           <ion-option value="Food-Vendor">Food Vendor</ion-option>
@@ -18,18 +20,20 @@
           <ion-option value="Plumber">Plumber</ion-option>
           <ion-option value="Electrician">Electrician</ion-option>
           <ion-option value="Momo">Momo Agent</ion-option>
+          <ion-option value="Shops">Shops</ion-option>
           <ion-option value="Barber">Barber</ion-option>
           <ion-option value="Boutiques">Boutiques</ion-option>
-          <ion-option value="Sikafone">Sikafone Agent</ion-option>
           <ion-option value="Saloons">Saloons</ion-option>
           <ion-option value="Supermarket">Supermarket</ion-option>
-          <ion-option value="Petty-Traders">Petty Traders</ion-option>
+          <ion-option value="Petty Traders">Petty Traders</ion-option>
           <ion-option value="Lawyer">Lawyer</ion-option>
           <ion-option value="Nurse">Teacher</ion-option>
           <ion-option value="Electrician">Electrician</ion-option>
           <ion-option value="Photographer">Photographer</ion-option>
-          <ion-option value="Media-House">Media House</ion-option>
+          <ion-option value="Media House">Media House</ion-option>
           <ion-option value="Taxi">Taxi/Trotro</ion-option>
+          <ion-option value="Fisherman">Fisherman</ion-option>
+          <ion-option value="Taylor">Tailor</ion-option>
         </ion-select>
       </ion-item>
       <ion-item>
@@ -39,32 +43,123 @@
       </ion-item>
       <ion-item>
         <ion-label>Office Name</ion-label>
-        <ion-input type="text" placeholder="Shop or Farm or Unit Name" [(ngModel)]="data.officeName" name="officeName" required="" ></ion-input>
+        <ion-input type="text" placeholder="Shop/Farm/Unit Name" [(ngModel)]="data.officeName" name="officeName" required="" ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Owner Name</ion-label>
         <ion-input type="text" placeholder="Owner Name" [(ngModel)]="data.otherNames" name="otherNames" required="" ></ion-input>
       </ion-item>
 
-    <ion-item>
-      <ion-label>Mobile</ion-label>
-      <ion-input type="text" placeholder="mobile" [(ngModel)]="data.mobile" name="mobile" required="" ></ion-input>
-    </ion-item>
-    
-    <ion-item>
-      <ion-label>Gender</ion-label>
-      <ion-select [(ngModel)]="data.gender" name="gender" required="">
-        <ion-option value="Male">Male</ion-option>
-        <ion-option value="Female">Female</ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-input placeholder="Location" 
-                 name="location" 
-                 type="text" required 
-                 [(ngModel)]="data.location">
+      <ion-item>
+        <!-- <ion-label floating>First Name</ion-label> -->
+        <ion-input placeholder="First Name"
+          name="firstName" 
+          type="text" required 
+          [(ngModel)]="data.firstName">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Middle Name</ion-label>
+        <ion-input
+                   name="middleName" 
+                   type="text" required 
+                   [(ngModel)]="data.middleName">
+                  </ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Last Name</ion-label>
+          <ion-input 
+                     name="lastName" 
+                     type="text" required 
+                     [(ngModel)]="data.lastName">
+                    </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Date of Birth: YYYY-MM-DD </ion-label>
+        <ion-input type="text" name="dateOfBirth"
+                   [(ngModel)]="data.dateOfBirth">
+                  </ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label floating>Id Type</ion-label>
+        <ion-select [(ngModel)]="data.idType" name="idType">/ion-input
+          <ion-option value="voter">Voter's ID</ion-option>
+          <ion-option value="NHIS">NHIS ID</ion-option>
+          <ion-option value="passport">Passport ID</ion-option>
+          <ion-option value="national">National ID</ion-option>
+        </ion-select>
+      </ion-item>
+       <ion-item>
+        <ion-label floating>Enter Selected ID number</ion-label>
+        <ion-input 
+                   name="idNo" 
+                   type="text" required 
+                   [(ngModel)]="data.idNo">
+                  </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Phone number</ion-label>
+        <ion-input 
+                   name="mobile" 
+                   type="text" required 
+                   [(ngModel)]="data.mobile">
+                  </ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="email" 
+                    name="email"  
+                    [(ngModel)]="data.email" >
                 </ion-input>
-    </ion-item>
+      </ion-item>
+      <ion-item>
+        <ion-label >Gender</ion-label>
+        <ion-select [(ngModel)]="data.gender" name="gender">
+          <ion-option value="female">Female</ion-option>
+          <ion-option value="male">Male</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Street</ion-label>
+        <ion-input 
+                   name="street" 
+                   type="text" required 
+                   [(ngModel)]="data.location">
+                  </ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating>City</ion-label>
+          <ion-input 
+                     name="city" 
+                     type="text" required 
+                     [(ngModel)]="data.city">
+                    </ion-input>
+        </ion-item>
+
+      <ion-item>
+        <ion-label floating>State/Region</ion-label>
+        <ion-select [(ngModel)]="data.state" name="state">
+          <ion-option value="greater accra">Greater Accra</ion-option>
+          <ion-option value="upper east">Upper East</ion-option>
+          <ion-option value="upper west">Upper West</ion-option>
+          <ion-option value="northern region">Northern Region</ion-option>
+          <ion-option value="eastern region">Eastern Region</ion-option>
+          <ion-option value="western region">Western Region</ion-option>
+          <ion-option value="brong ahafo">Brong Ahafo</ion-option>
+          <ion-option value="ashanti region">Ashanti Region</ion-option>
+          <ion-option value="volta region">Volta Region</ion-option>
+          <ion-option value="central region">Central Region</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Country</ion-label>
+        <ion-select [(ngModel)]="data.country" name="country">
+          <ion-option value="Ghana">Ghana</ion-option>
+          <ion-option value="Nigeria">Nigeria</ion-option>
+        </ion-select>
+      </ion-item>
     <ion-item>
       <ion-textarea placeholder="Items or Products or Service" 
                  name="otherInfo" 
