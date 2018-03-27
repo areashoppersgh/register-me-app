@@ -14,9 +14,9 @@ import { Business } from './../../models/business.model';
 export class RestProvider {
   //host nabiypy@hotmail.co.uk
   // baseUrl: string = "https://sikafone-pymvrkzhqa.now.sh";
-  // baseUrl: any = 'http://app-a8f9bd8b-8769-4f5e-b771-34aa090657d0.cleverapps.io';//live
+  baseUrl: any = 'http://app-91ee03ec-2138-4ccf-93bc-159e2e84d271.cleverapps.io'; //live
   // baseUrl: any = 'https://sikafone-vlqfqnvtfv.now.sh';
-  baseUrl: any = 'http://localhost:8080';
+  // baseUrl: any = 'http://localhost:8080';
 
   result: any;
   constructor(public http: HttpClient, public storage: Storage) {
@@ -147,7 +147,7 @@ export class RestProvider {
   
   generateFindMeId() {
     var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@-";
   
     for (var i = 0; i < 8; i++)
       text += possible.charAt(Math.floor(Math.random() * possible.length));

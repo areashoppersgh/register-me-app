@@ -10,7 +10,8 @@ import { Toast } from '@ionic-native/toast';
 })
 export class EditDataPage {
 
-  data = { rowid:0, userId:"", findMeId:"", officeName:"", otherNames:"", mobile:"", directory:"", latitude:"", location:"", longitude:"", gender:"", fileUpload:"", otherInfo:""};
+  // data = { rowid:0, userId:"", findMeId:"", officeName:"", otherNames:"", mobile:"", directory:"", latitude:"", location:"", longitude:"", gender:"", fileUpload:"", otherInfo:""};
+  data = { rowid:0, userId:"", findMeId:"", officeName:"", firstName:"", middleName:"", lastName:"", otherNames:"", dateOfBirth:"", idType:"", idNo:"", email:"", mobile:"", directory:"", latitude:"", longitude:"",location:"", gender:"", street:"", city:"", state:"", country:"", maritalStatus:"", homeTown:"", landSize:"", fileUpload:"",otherInfo:""};
 
 
   constructor(public navCtrl: NavController,
@@ -25,7 +26,7 @@ export class EditDataPage {
       name: 'ionicdb.db',
       location: 'default'
     }).then((db: SQLiteObject) => {
-      db.executeSql('SELECT * FROM tester WHERE rowid=?', [rowid])
+      db.executeSql('SELECT * FROM eco WHERE rowid=?', [rowid])
         .then(res => {
           if(res.rows.length > 0) {
             this.data.rowid = res.rows.item(0).rowid;
@@ -41,6 +42,19 @@ export class EditDataPage {
             this.data.gender = res.rows.item(0).gender;
             this.data.fileUpload = res.rows.item(0).fileUpload;
             this.data.otherInfo = res.rows.item(0).otherInfo;
+            this.data.firstName = res.rows.item(0).firstName
+            this.data.middleName = res.rows.item(0).middleName
+            this.data.lastName = res.rows.item(0).lastName
+            this.data.dateOfBirth = res.rows.item(0).dateOfBirth
+            this.data.idType = res.rows.item(0).idType
+            this.data.idNo = res.rows.item(0).idNo
+            this.data.email = res.rows.item(0).email
+            this.data.street = res.rows.item(0).street
+            this.data.city = res.rows.item(0).city
+            this.data.state = res.rows.item(0).state
+            this.data.country = res.rows.item(0).country
+            this.data.homeTown = res.rows.item(0).homeTown
+            this.data.landSize= res.rows.item(0).landSize
           }
         })
         .catch(e => {
@@ -66,7 +80,7 @@ export class EditDataPage {
       name: 'ionicdb.db',
       location: 'default'
     }).then((db: SQLiteObject) => {
-      db.executeSql('UPDATE tester SET findMeId=?,officeName=?,otherNames=?,mobile=?,directory=?,latitude=?,longitude=?,location=?,gender=?,fileUpload=?,otherInfo=? WHERE rowid=?',[
+      db.executeSql('UPDATE eco SET findMeId=?,officeName=?,otherNames=?,mobile=?,directory=?,latitude=?,longitude=?,location=?,gender=?,fileUpload=?,otherInfo=? WHERE rowid=?',[
         this.data.findMeId,
         this.data.officeName,
         this.data.otherNames,

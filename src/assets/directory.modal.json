@@ -638,6 +638,18 @@
                 }
                
             ]
+        },
+        { 
+            "name": "Others",
+            "children": [
+                {
+                    "name": "Other Directories",
+                    "information": "Register any other directory not specified here.",
+                    "price": "25",
+                    "group": "Others",
+                    "icon": ""
+                }
+            ]
         }
     ]
 }

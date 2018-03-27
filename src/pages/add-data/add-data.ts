@@ -101,7 +101,8 @@ export class AddDataPage {
        // If it's base64:
         this.base64Image = 'data:image/jpeg;base64,' + imageData;
         this.imageURI = imageData;
-        // this.data.fileUpload = this.base64Image;
+        this.data.fileUpload = this.base64Image;
+
         this.photos = this.base64Image;
         this.photos.reverse();
       }, (err) => {
@@ -155,7 +156,7 @@ public pathForImage(img) {
       name: 'ionicdb.db',
       location: 'default'
     }).then((db: SQLiteObject) => {
-      db.executeSql('INSERT INTO tester VALUES(NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',[
+      db.executeSql('INSERT INTO eco VALUES(NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',[
         this.data.userId,
         this.data.findMeId,
         this.data.officeName,

@@ -41,7 +41,6 @@ export class OfflinePage {
       this.userId = userId;
       console.log('@offlinePage this.userId >>>', this.userId);
       this.reloadBusinessByUser(this.userId);
-
     });
     // this.reloadBusiness();
   }
