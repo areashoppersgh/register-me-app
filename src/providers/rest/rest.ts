@@ -12,8 +12,7 @@ import { Business } from './../../models/business.model';
 */
 @Injectable()
 export class RestProvider {
-  //host nabiypy@hotmail.co.uk
-  // baseUrl: string = "https://sikafone-pymvrkzhqa.now.sh";
+  // baseUrl: string = "https://sikafone-pymvrkzhqa.now.sh"; //host nabiypy@hotmail.co.uk
   baseUrl: any = 'http://app-91ee03ec-2138-4ccf-93bc-159e2e84d271.cleverapps.io'; //live
   // baseUrl: any = 'https://sikafone-vlqfqnvtfv.now.sh';
   // baseUrl: any = 'http://localhost:8080';
