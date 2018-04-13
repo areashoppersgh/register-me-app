@@ -173,7 +173,7 @@ export class UploadsPage {
         console.log('error posting offline form data',JSON.stringify(err));
         // this.error = err;
         this.isLoading.dismiss();
-        this.presentToast("Provide Latitude and Longitude :: "+" Check your device location serivce");
+        this.presentToast("No geolocation coordinates :: "+" Check your device location serivce");
         this.toast.show('Please Turn your GPS on', '5000', 'center').subscribe(
           toast => {
             console.log(toast);
