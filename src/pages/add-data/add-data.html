@@ -37,7 +37,7 @@
           <ion-option value="Filling Station">Filling Station</ion-option>
           <ion-option value="Spare Parts">Spare Parts Dealer</ion-option>
           <ion-option value="Hairdresser">Hair Dresser</ion-option>
-          <ion-option value="Seamstress">Hair Dresser</ion-option>
+          <ion-option value="Seamstress">Seamstress</ion-option>
           <ion-option value="Deliveries">General Delivery</ion-option>
           <ion-option value="Seamstress">Others</ion-option>
         </ion-select>
@@ -125,6 +125,13 @@
         <ion-select [(ngModel)]="data.gender" name="gender">
           <ion-option value="female">Female</ion-option>
           <ion-option value="male">Male</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label >Marital Status</ion-label>
+        <ion-select [(ngModel)]="data.maritalStatus" name="maritalStatus">
+          <ion-option value="single">Single</ion-option>
+          <ion-option value="married">Married</ion-option>
         </ion-select>
       </ion-item>
       <ion-item>

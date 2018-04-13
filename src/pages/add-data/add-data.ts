@@ -57,9 +57,9 @@ export class AddDataPage {
         console.log('@AddDataPage isLoggedIn >>>', userId);
         this.userId = userId;
         this.data.userId = userId;
-        console.log('@AddDataPage this.data.userId >>>', this.data.userId);
+        console.log('storage get username :::', this.data.userId);
       });
-      console.log("@AddDataPage data payload >>> ", JSON.stringify(this.data));
+      // console.log("@AddDataPage data payload >>> ", JSON.stringify(this.data));
       this.setGeoLocation()
     }
 
@@ -102,7 +102,6 @@ export class AddDataPage {
         this.base64Image = 'data:image/jpeg;base64,' + imageData;
         this.imageURI = imageData;
         this.data.fileUpload = this.base64Image;
-
         this.photos = this.base64Image;
         this.photos.reverse();
       }, (err) => {
@@ -113,25 +112,7 @@ export class AddDataPage {
       });
     }
   
-
-  
-     // Create a new name for the image
-  private createFileName() {
-    var d = new Date(),
-    n = d.getTime(),
-    newFileName =  n + ".jpg";
-    return newFileName;
-  }
  
-// Copy the image to a local folder
-private copyFileToLocalDir(namePath, currentName, newFileName) {
-  // this.file.copyFile(namePath, currentName, cordova.file.dataDirectory, newFileName).then(success => {
-  //   this.lastImage = newFileName;
-  // }, error => {
-  //   this.presentToast('Error while storing file.');
-  // });
-}
-
 private presentToast(text) {
   let toast = this.toastCtrl.create({
     message: text,
@@ -140,15 +121,7 @@ private presentToast(text) {
   });
   toast.present();
 }
- 
-// Always get the accurate path to your apps folder
-public pathForImage(img) {
-  if (img === null) {
-    return '';
-  } else {
-    // return cordova.file.dataDirectory + img;
-  }
-}
+
 
     
   saveData() {
@@ -156,7 +129,7 @@ public pathForImage(img) {
       name: 'ionicdb.db',
       location: 'default'
     }).then((db: SQLiteObject) => {
-      db.executeSql('INSERT INTO eco VALUES(NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',[
+      db.executeSql('INSERT INTO tfosu VALUES(NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',[
         this.data.userId,
         this.data.findMeId,
         this.data.officeName,
@@ -178,13 +151,17 @@ public pathForImage(img) {
         this.data.city,
         this.data.state,
         this.data.country,
+        this.data.maritalStatus,
         this.data.homeTown,
-        this.data.landSize,
         this.data.fileUpload,
+        this.data.landSize,
         this.data.otherInfo
       ]).then(res => {
-          console.log("Save offline data >>> ",JSON.stringify(res));
-          console.log("offline data to be save >>> ",JSON.stringify(this.data));
+          console.log("save offline data response >>> ",JSON.stringify(res));
+          console.log('******************************************');
+          console.log("offline data saved >>> ");
+          console.log(JSON.stringify(this.data));
+          console.log('******************************************');
           this.toast.show('Data saved', '5000', 'center').subscribe(
             toast => {
               this.navCtrl.popToRoot();
@@ -193,18 +170,16 @@ public pathForImage(img) {
         })
         .catch(e => {
           console.log("error saving offline data >>> ",JSON.stringify(e));
-          this.toast.show(e, '5000', 'center').subscribe(
-            toast => {
-              console.log(toast);
-            }
+          let savError = JSON.stringify(e);
+          this.toast.show(savError, '5000', 'center').subscribe(
+            toast => {console.log('error saving offline',JSON.stringify(toast)); }
           );
         });
     }).catch(e => {
       console.log("error inserting to offline database >>>",JSON.stringify(e));
-      this.toast.show(e, '5000', 'center').subscribe(
-        toast => {
-          console.log(toast);
-        }
+      let insertError = JSON.stringify(e);
+      this.toast.show(insertError, '5000', 'center').subscribe(
+        toast => {console.log('error inserting into db',toast); }
       );
     });
   }

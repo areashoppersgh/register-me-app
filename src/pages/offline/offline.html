@@ -19,7 +19,7 @@
 
   <ion-list *ngFor="let bus of businessess; let i=index">
     <ion-item  *ngIf="(userId == bus.userId)">
-      <ion-thumbnail item-start>
+      <ion-thumbnail class="profile-image" item-start>
         <img src="{{bus.fileUpload}}">
       </ion-thumbnail>
       <h2>{{bus.findMeId}}</h2>
@@ -33,7 +33,6 @@
 
   <!-- <ion-list *ngFor="let bus of businessess; let i=index">
     <ion-item >
-
       <ion-thumbnail item-start>
         <img src="{{bus.fileUpload}}">
       </ion-thumbnail>

@@ -26,7 +26,7 @@ export class EditDataPage {
       name: 'ionicdb.db',
       location: 'default'
     }).then((db: SQLiteObject) => {
-      db.executeSql('SELECT * FROM eco WHERE rowid=?', [rowid])
+      db.executeSql('SELECT * FROM tfosu WHERE rowid=?', [rowid])
         .then(res => {
           if(res.rows.length > 0) {
             this.data.rowid = res.rows.item(0).rowid;
@@ -40,8 +40,6 @@ export class EditDataPage {
             this.data.longitude = res.rows.item(0).longitude;
             this.data.location = res.rows.item(0).location;
             this.data.gender = res.rows.item(0).gender;
-            this.data.fileUpload = res.rows.item(0).fileUpload;
-            this.data.otherInfo = res.rows.item(0).otherInfo;
             this.data.firstName = res.rows.item(0).firstName
             this.data.middleName = res.rows.item(0).middleName
             this.data.lastName = res.rows.item(0).lastName
@@ -53,8 +51,11 @@ export class EditDataPage {
             this.data.city = res.rows.item(0).city
             this.data.state = res.rows.item(0).state
             this.data.country = res.rows.item(0).country
+            this.data.maritalStatus = res.rows.item(0).maritalStatus
             this.data.homeTown = res.rows.item(0).homeTown
             this.data.landSize= res.rows.item(0).landSize
+            this.data.fileUpload = res.rows.item(0).fileUpload;
+            this.data.otherInfo = res.rows.item(0).otherInfo;
           }
         })
         .catch(e => {
@@ -80,7 +81,7 @@ export class EditDataPage {
       name: 'ionicdb.db',
       location: 'default'
     }).then((db: SQLiteObject) => {
-      db.executeSql('UPDATE eco SET findMeId=?,officeName=?,otherNames=?,mobile=?,directory=?,latitude=?,longitude=?,location=?,gender=?,fileUpload=?,otherInfo=? WHERE rowid=?',[
+      db.executeSql('UPDATE tfosu SET findMeId=?,officeName=?,otherNames=?,mobile=?,directory=?,latitude=?,longitude=?,location=?,gender=?,fileUpload=?,otherInfo=? WHERE rowid=?',[
         this.data.findMeId,
         this.data.officeName,
         this.data.otherNames,

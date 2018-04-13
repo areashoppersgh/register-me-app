@@ -19,7 +19,7 @@
     <ion-item-sliding  *ngIf="(userId == expense.userId)">
       <ion-item>
         <ion-thumbnail class="profile-image" item-start>
-          <img src="{{expense.fileUpload}}">
+          <img [src]="expense.fileUpload">
         </ion-thumbnail>
         <h2>{{expense.findMeId}}</h2>
         <p>{{expense.mobile}}</p>
