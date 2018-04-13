@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Storage } from '@ionic/storage';
 
@@ -22,13 +22,15 @@ export class LoginPage {
   myForm: FormGroup;
   error: any;
   isLoading: any;
+  isToast: any;
   credentials = {} as User;
 
   constructor(public navCtrl: NavController, 
     public navParams: NavParams, 
     public authService: AuthProvider,
     public loadingCtrl: LoadingController,
-    public storage: Storage) {
+    public storage: Storage,
+    private toastCtrl: ToastController,) {
   }
 
   ionViewDidLoad() {
@@ -54,15 +56,22 @@ export class LoginPage {
   login(){
     console.log('login credentials', JSON.stringify(this.credentials))
     this.showLoader();
-    this.storage.set('username', this.credentials.username);
+    // this.storage.set('username', this.credentials.username);
     this.authService.signIn(this.credentials).then((result) => {
         console.log('@LoginCtrl login result >>>',result);
         this.isLoading.dismiss();
+        localStorage.setItem('token', JSON.stringify(result['token']));
+        localStorage.setItem('userId', result['user']);
+        this.storage.set('username', result['user']);
+
+        // console.log('get login token', localStorage.getItem('token'));
         this.navCtrl.setRoot('TabsPage');
     }, (err) => {
         this.isLoading.dismiss();
         console.log(err);
-        this.navCtrl.setRoot('TabsPage');
+        // alert('error login'+ JSON.stringify(err));
+        this.presentToast('wrong username or password ::: '+ JSON.stringify(err['error']));
+        // this.navCtrl.setRoot('TabsPage');
     });
   }
 
@@ -78,6 +87,14 @@ export class LoginPage {
     this.isLoading.present();
 }
 
+presentToast(msg) {
+  this.isToast = this.toastCtrl.create({
+  message: msg,
+  duration: 4000,
+  position: 'middle'
+});
 
+this.isToast.present();
+}
 
 }
