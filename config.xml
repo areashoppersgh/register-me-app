@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.arearegisterme.starter" version="0.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="io.arearegisterme.starter" version="0.0.9" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>register-me</name>
-    <description>An Econnect Global Ghana application.</description>
+    <description>Egal mobile app for onboarding and listing business.</description>
     <author email="digimax1014@gmail.com" href="http://www.thebobman.com">Hanson</author>
     <content src="index.html" />
     <access origin="*" />
