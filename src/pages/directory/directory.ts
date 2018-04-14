@@ -224,7 +224,10 @@ export class DirectoryPage {
       this.navCtrl.push('FormsPage',{ id: post.id, name: post.name,  group: post.group});
     }else if( post.name == 'Ecobank Xpress Account'){
       this.navCtrl.push('FormsPage',{ id: post.id, name: post.name,  group: post.group});
+    }else if( post.name == 'Other Directories'){
+      this.navCtrl.push('FormsPage',{ id: post.id, name: post.name,  group: post.group});
     }
+    
     
   }
   // Create basic user bio data table

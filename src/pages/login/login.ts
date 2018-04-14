@@ -56,7 +56,7 @@ export class LoginPage {
   login(){
     console.log('login credentials', JSON.stringify(this.credentials))
     this.showLoader();
-    // this.storage.set('username', this.credentials.username);
+    this.storage.set('username', this.credentials.username);
     this.authService.signIn(this.credentials).then((result) => {
         console.log('@LoginCtrl login result >>>',result);
         this.isLoading.dismiss();
@@ -68,10 +68,10 @@ export class LoginPage {
         this.navCtrl.setRoot('TabsPage');
     }, (err) => {
         this.isLoading.dismiss();
-        console.log(err);
+        console.log('Error Login >>> ', JSON.stringify(err));
         // alert('error login'+ JSON.stringify(err));
-        this.presentToast('wrong username or password ::: '+ JSON.stringify(err['error']));
-        // this.navCtrl.setRoot('TabsPage');
+        // this.presentToast('wrong username or password ::: '+ JSON.stringify(err['error']));
+        this.navCtrl.setRoot('TabsPage');
     });
   }
 

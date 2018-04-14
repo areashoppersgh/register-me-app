@@ -358,7 +358,11 @@ export class FormsPage {
     }else if (this.selectedName == "Ecobank Xpress Account") {
       this.ecobankXpressAccount = true;
       console.log('selected Ecobank Xpress Account form', this.ecobankXpressAccount);
+    }else if (this.selectedName == "Other Directories") {
+      this.ecobankXpressAccount = true;
+      console.log('selected Others form', this.ecobankXpressAccount);
     }
+    
     
     this.setGeoLocation();
   }
